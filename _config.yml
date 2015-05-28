@@ -11,6 +11,7 @@ title: On Test... (Jekyll)
 
 # #######################################
 url: http://mpmendespt.github.io/
+site.baseurl: http://mpmendespt.github.io/
 baseurl:  ''
 paginate:  5
 
