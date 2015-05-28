@@ -8,16 +8,15 @@ name: Manuel Mendes
 description: ""
 
 #
-# permalink: /:title/
+permalink: /:title/
 
 # Permalinks
 #
 # Use of `relative_permalinks` ensures post links from the index work properly.
-permalink:           pretty
+# permalink:           pretty
 relative_permalinks: true
 #
-# baseurl: /christmas-recipes
-baseurl: /
+
 
 # paginate: 10
 # markdown: rdiscount
