@@ -18,8 +18,8 @@ output = paste0(dir, sub('.Rmd', '.md', filename))
 knit(filename, output)
 
 # Copy .png files to the images directory.
-fromdir = "{{ site.url }}/images"
-todir = "../images"
+fromdir = "./figure"
+todir = "../figure"
 
 pics = list.files(fromdir, ".png")
 pics = sapply(pics, function(x) paste(fromdir, x, sep="/"))
