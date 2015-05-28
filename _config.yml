@@ -51,7 +51,14 @@ markdown: redcarpet
 redcarpet:
   extensions: ["tables"]
 highlighter: pygments
-permalink: /:title/
+
+# permalink: /:title/
+
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:           pretty
+relative_permalinks: true
 
 # The release of Jekyll Now that you're using
 version: v1.1.0
