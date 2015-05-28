@@ -6,14 +6,6 @@ javascript:
   - /javascripts/home.js
 ---
 
-<!--     -->
-<div id="search_results_area">
-  <h2>Posts <span id="result_count"></span></h2>
-  <ul id="search_results" class="posts">
-  </ul>
-</div>
-<!--     -->
-
 <div class="posts">
   {% for post in paginator.posts %}
   <div class="post">
@@ -48,31 +40,4 @@ javascript:
   {% endif %}
 </div>
 
-<!--  ***********   -->
-  <script type="text/javascript" charset="utf-8">
-    var posts = [
-      {% for post in site.posts %}
-        {
-          title:   unescape('{{ post.title   | strip_html | cgi_escape }}').gsub(/\+/, ' '),
-          summary: unescape('{{ post.summary | strip_html | cgi_escape }}').gsub(/\+/, ' '),
-          content: unescape('{{ post.content | strip_html | cgi_escape }}').gsub(/\+/, ' '),
-          url:     unescape('{{ post.url     | strip_html | cgi_escape }}').gsub(/\+/, ' '),
-        },
-      {% endfor %}
-    0];
 
-    posts.pop();
-  </script>
-
-  <script type="text/javascript" src="/javascripts/twitter-1.11.2.js"></script>
-
-  <script type="text/javascript">
-    getTwitters('tweets', {
-      id: 'jqr',
-      count: 5,
-      enableLinks: true,
-      clearContents: true,
-      template: '%text%'
-    });
-  </script>
-<!--  ***********   -->
