@@ -9,6 +9,11 @@ description: ""
 
 title: On Test... (Jekyll)
 
+# #######################################
+url: http://mpmendespt.github.io/
+baseurl:  ''
+paginate:  5
+
 # Permalinks
 #
 # Use of `relative_permalinks` ensures post links from the index work properly.
@@ -24,10 +29,7 @@ markdown: redcarpet
 #  extensions: ["tables"]
 highlighter: pygments
 
-# #######################################
-url: http://mpmendespt.github.io/
-baseurl:  ''
-paginate:  5
+
 
 # This is the list of pages to incldue in the header of the website.
 pages_list:
