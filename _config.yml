@@ -2,10 +2,12 @@
 # This file contains configuration flags to customize your site
 #
 # Name of your site (displayed in the header)
-name: Manuel Mendes
+name: On Test... (Jekyll)
 
+author: Manuel Mendes
+#github: mpmendespt
 #
-description: ""
+description: "Test..."
 
 title: On Test... (Jekyll)
 
@@ -21,7 +23,7 @@ paginate:  5
 #
 # Use of `relative_permalinks` ensures post links from the index work properly.
 #permalink:         pretty
-permalink:  /:year/:i_month/:i_day/:title.html
+permalink:  /:categories/:title.html
 #permalink: /:year/:month/:day/:title
 #permalink: /blog/:year/:month/:day/:title
 #relative_permalinks: false
@@ -35,7 +37,8 @@ markdown: redcarpet
 highlighter: pygments
 
 ###############################33
-
+safe: true
+auto: false 
 
 #############################################
 
