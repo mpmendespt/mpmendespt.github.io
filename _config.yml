@@ -30,6 +30,8 @@ redcarpet:
   extensions: ["tables"]
 highlighter: pygments
 
+paginate_path: "/_posts/:num"
+
 # permalink: /:title/
 
 # Permalinks
