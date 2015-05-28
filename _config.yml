@@ -5,6 +5,29 @@
 name: Manuel Mendes
 
 #
+description: ""
+
+#
+# permalink: /:title/
+
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:           pretty
+relative_permalinks: true
+#
+# baseurl: /christmas-recipes
+baseurl: /
+
+# paginate: 10
+# markdown: rdiscount
+markdown: redcarpet  
+redcarpet:
+  extensions: ["tables"]
+highlighter: pygments
+
+
+
 # Flags below are optional
 #
 # Includes an icon in the footer for each username you enter
@@ -25,20 +48,7 @@ footer-links:
 
 
 
-markdown: redcarpet
-redcarpet:
-  extensions: ["tables"]
-highlighter: pygments
 
-paginate_path: "/_posts/:num"
-
-# permalink: /:title/
-
-# Permalinks
-#
-# Use of `relative_permalinks` ensures post links from the index work properly.
-permalink:           pretty
-relative_permalinks: true
 
 # The release of Jekyll Now that you're using
 version: v1.1.0
