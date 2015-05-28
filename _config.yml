@@ -20,8 +20,8 @@ paginate:  5
 # Permalinks
 #
 # Use of `relative_permalinks` ensures post links from the index work properly.
-permalink:         pretty
-#permalink: /:title
+#permalink:         pretty
+permalink: :baseurl/:title
 #permalink: /mpmendespt.github.io/:title
 #permalink: /:year/:month/:day/:title
 #permalink: /blog/:year/:month/:day/:title
