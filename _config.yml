@@ -13,16 +13,18 @@ title: On Test... (Jekyll)
 url: http://mpmendespt.github.io/
 shorturl:  mpmendespt.github.io
 
-baseurl:  ''
+baseurl: "/"
+#baseurl:  ''
 paginate:  5
 
 # Permalinks
 #
 # Use of `relative_permalinks` ensures post links from the index work properly.
-#permalink:           pretty
+permalink:           pretty
 #permalink: /:title/
 #permalink: /blog/:year/:month/:day/:title
 relative_permalinks: true
+
 #
 # paginate: 10
 # markdown: rdiscount
