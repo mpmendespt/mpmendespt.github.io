@@ -21,8 +21,8 @@ paginate:  5
 #
 # Use of `relative_permalinks` ensures post links from the index work properly.
 #permalink:           pretty
-#permalink: :title/
-permalink: /:year/:month/:day/:title
+permalink: :title/
+#permalink: /:year/:month/:day/:title
 #permalink: /blog/:year/:month/:day/:title
 relative_permalinks: false
 
@@ -30,8 +30,8 @@ relative_permalinks: false
 # paginate: 10
 # markdown: rdiscount
 markdown: redcarpet  
-redcarpet:
-  extensions: ["tables"]
+#redcarpet:
+#  extensions: ["tables"]
 highlighter: pygments
 
 
