@@ -1,7 +1,6 @@
 ---
-title: "Test1"
+title: "R Test"
 author: "MM"
-date: "Thursday, May 28, 2015"
 layout: post
 category: R
 ---
