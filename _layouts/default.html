@@ -4,8 +4,13 @@
   {% include head.html %}
 
   <body>
-      <!--  ***************  -->
-
+      		<!--  ***************  -->
+		<h3 class="masthead-title">
+		{% for page in site.pages_list %}
+		&nbsp;&nbsp;&nbsp;
+		<small><a href="{{ page[1]  }}">{{ page[0] }}</a></small>
+		{% endfor %}
+		</h3>
 		<!--  ***************  -->
 
     {% include sidebar.html %}
@@ -21,14 +26,7 @@
           </h3>
         </div>
       </div>
-		<!--  ***************  -->
-		<h3 class="masthead-title">
-		{% for page in site.pages_list %}
-		&nbsp;&nbsp;&nbsp;
-		<small><a href="{{ page[1]  }}">{{ page[0] }}</a></small>
-		{% endfor %}
-		</h3>
-		<!--  ***************  -->
+
       	  
       <div class="container content">
         {{ content }}
