@@ -75,8 +75,25 @@ footer-links:
   stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
 
 # Your disqus shortname, entering this will enable commenting on posts
-disqus: mpmendespt
+# disqus: mpmendespt
 
+# Settings for comments helper
+# Set 'provider' to the comment provider you want to use.
+# Set 'provider' to false to turn commenting off globally.
+#
+comments :
+  provider : disqus
+  disqus : 
+    short_name : mpmendespt
+#  livefyre :
+#    site_id : 123
+#  intensedebate :
+#    account : 123abc
+#  facebook :
+#    appid : 123
+#    num_posts: 5
+#    width: 580
+#    colorscheme: light
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
