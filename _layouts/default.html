@@ -6,26 +6,38 @@
   <body>
 
     {% include sidebar.html %}
-
-    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
-         content to avoid any CSS collisions with our real content. -->
-    <div class="wrap">
-      <div class="masthead">
-        <div class="container">
-          <h3 class="masthead-title">
-            <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
-            <small>{{ site.tagline }}</small>
-          </h3>
-        </div>
-      </div>
-	 	<!--  ***************  -->
-		<h3 class="masthead-title">
-		{% for page in site.pages_list %}
-		&nbsp;&nbsp;&nbsp;
-		<small><a href="{{ page[1]  }}">{{ page[0] }}</a></small>
-		{% endfor %}
-		</h3>
-		<!--  ***************  -->
+     
+	 <!--  ***************  -->
+	 <div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4">
+		  <!--  ***************  -->
+		  
+				 <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+						content to avoid any CSS collisions with our real content. -->
+				 <div class="wrap">
+					<div class="masthead">
+					  <div class="container">
+						 <h3 class="masthead-title">
+							<a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
+							<small>{{ site.tagline }}</small>
+						 </h3>
+					  </div>
+					</div>
+			<!--  ***************  -->
+			</div> <!--  col-md-4  -->
+			<div class="col-md-8">
+					<!--  ***************  -->
+					<h3 class="masthead-title">
+					{% for page in site.pages_list %}
+					&nbsp;&nbsp;&nbsp;
+					<small><a href="{{ page[1]  }}">{{ page[0] }}</a></small>
+					{% endfor %}
+					</h3>
+					<!--  ***************  -->
+			</div> <!--  col-md-8  -->
+	 </div> <!--  "row"  -->
+	</div> <!--   container-fluid  -->		
       	  
       <div class="container content">
         {{ content }}
