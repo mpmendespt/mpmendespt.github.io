@@ -1,25 +1,16 @@
-<footer>
-	<div class="container">
-		<div class="row">
-			<div class="col6">
-				<div class="copyright">
-					<!--Be nice and keep the copyright here! thanx.-->
-					&copy; 2014 - Built with <a href="http://jekyllrb.com/">Jekyll</a> using <a href="http://www.newaeonweb.com.br/sasa">SASa Block-Grid!</a>
-				</div>
-			</div>
-			<div class="col6">
-				<nav class="social-links">
-					<ul class="menu-list">
-						{% for link in site.social-links %}
-						<li>
-							<a target="{% if link.external %}_blank{% else %}_top{% endif %}" class="{{ link.icon }}" href="{{ link.url }}">{{ link.name }}</a>
-						</li>
-						{% endfor %}
-					</ul>
-				</nav>
-			</div>
-		</div>
-	</div>
+<footer class="footer">
+  <ul class="footer--links">
+    <li>
+      <a href="https://twitter.com/mpmendespt">Twitter</a>
+    </li>
+    <li>
+      <a href="https://github.com/mpmendespt">GitHub</a>
+    </li>
+    <li>
+    <!--   <a href="/feed.xml">RSS</a>    -->
+    </li>
+  </ul>
+  <!-- <p class="footer--copyright">© Copyright 2015 Manuel Mendes</p>  -->
 </footer>
 
 
