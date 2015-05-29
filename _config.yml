@@ -44,8 +44,10 @@ auto: false
 
 # This is the list of pages to incldue in the header of the website.
 pages_list:
+  Home: '/'    
   About: '/about'
   Archive: '/archive'
+  Links: '/links'
 
 
 # The release of Jekyll Now that you're using
@@ -53,7 +55,7 @@ version: v1.1.0
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 #avatar: /images/meSmall.jpg
-
+  
 #
 # Flags below are optional
 #
@@ -72,7 +74,7 @@ footer-links:
   stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
 
 # Your disqus shortname, entering this will enable commenting on posts
-disqus: mpmendesptgithubio
+disqus: mpmendespt
 
 
 # The production_url is only used when full-domain names are needed
