@@ -9,3 +9,4 @@ source("r2jekyll.R")
 filename = "Test1.Rmd"
 source("r2jekyll.R")
 
+setwd("D:/DL/_DL_/_ELECTRONICA_/_ESTUDO_3/_Blog with RStudio_/mpmendespt.github.io/_drafts")
