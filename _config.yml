@@ -39,7 +39,7 @@ highlighter: pygments
 
 ###############################33
 safe: true
-#auto: false 
+auto: false 
 
 exclude: ["*.Rmd"]
 
