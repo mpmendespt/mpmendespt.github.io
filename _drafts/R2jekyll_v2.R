@@ -10,8 +10,6 @@ if(!grepl(".Rmd", filename)) {
   stop("You must specify a .Rmd file.")
 }
 
-
-
 # Knit and place in _posts.
 dir = paste0("../_posts/", Sys.Date(), "-")
 output = paste0(dir, sub('.Rmd', '.md', filename))
@@ -21,6 +19,8 @@ opts_knit$set(base.url = base.url)
 fig.path <- paste0("../figure/", sub(".Rmd$", "", basename(filename)), "/")
 opts_chunk$set(fig.path = fig.path)
 #
+#http://chepec.se/2014/07/16/knitr-jekyll.html
+render_jekyll()
 knit(filename, output)
 
 # # Copy .png files to the images directory.
