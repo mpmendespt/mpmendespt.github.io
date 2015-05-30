@@ -4,8 +4,6 @@ author: "Manuel Mendes"
 date: "Thursday, April 23, 2015"
 layout: post
 category: R
-references:
-  URL: 'https://rpubs.com/mpmendespt/74985'
 ---
 
 # Analysis on U.S. NOAA storm database

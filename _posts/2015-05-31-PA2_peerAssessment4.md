@@ -4,8 +4,6 @@ author: "Manuel Mendes"
 date: "Thursday, April 23, 2015"
 layout: post
 category: R
-references:
-  URL: 'https://rpubs.com/mpmendespt/74985'
 ---
 
 # Analysis on U.S. NOAA storm database
@@ -32,24 +30,6 @@ rm(list=ls())
 {% highlight r %}
 echo = TRUE  # Make code visible
 source("multiplot.R")  # multiplot
-{% endhighlight %}
-
-
-
-{% highlight text %}
-## Warning in file(filename, "r", encoding = encoding): cannot open file
-## 'multiplot.R': No such file or directory
-{% endhighlight %}
-
-
-
-{% highlight text %}
-## Error in file(filename, "r", encoding = encoding): cannot open the connection
-{% endhighlight %}
-
-
-
-{% highlight r %}
 suppressWarnings(library(plyr))
 library(knitr)
 suppressWarnings(library(ggplot2))
@@ -65,7 +45,7 @@ system.time(df <- read.csv(bzfile("repdata_data_StormData.csv.bz2"),
 
 {% highlight text %}
 ##    user  system elapsed 
-##   92.49    0.52   93.29
+##   94.81    0.59   95.44
 {% endhighlight %}
 
 
@@ -238,13 +218,7 @@ plot4 <- ggplot(data=head(summary4,10), aes(x=EVTYPE, y=fatalities, fill=fatalit
 multiplot(plot3, plot4, cols=2)
 {% endhighlight %}
 
-
-
-{% highlight text %}
-## Error in eval(expr, envir, enclos): could not find function "multiplot"
-{% endhighlight %}
-
-
+![center](/../figure/PA2_peerAssessment4/unnamed-chunk-8-1.png) 
 
 {% highlight r %}
 #
