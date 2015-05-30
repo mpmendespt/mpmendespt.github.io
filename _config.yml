@@ -18,7 +18,7 @@ shorturl:  mpmendespt.github.io
 
 #
 baseurl:  ''
-paginate:  2
+paginate:  5
 
 # Permalinks
 #
@@ -62,14 +62,14 @@ avatar: https://raw.githubusercontent.com/mpmendespt/mpmendespt.github.io/master
 #
 # Includes an icon in the footer for each username you enter
 footer-links:
-  dribbble: 
-  email: 
   facebook: mpmendespt
   flickr: 
   github: mpmendespt
   instagram: 
   linkedin: 
   pinterest: 
+  dribbble: 
+  email: 
   #rss: Y # just type anything here for a working RSS icon, make sure you set the "url" above!
   twitter: mpmendespt
   stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
