@@ -15,15 +15,17 @@ if(!grepl(".Rmd", filename)) {
 # Knit and place in _posts.
 dir = paste0("../_posts/", Sys.Date(), "-")
 output = paste0(dir, sub('.Rmd', '.md', filename))
+#
+base.url = "/"
+opts_knit$set(base.url = base.url)
+fig.path <- paste0("../figure/", sub(".Rmd$", "", basename(filename)), "/")
+opts_chunk$set(fig.path = fig.path)
+#
 knit(filename, output)
 
-# Copy .png files to the images directory.
-fromdir = "./figure"
-todir = "../figure"
-
-pics = list.files(fromdir, ".png")
-pics = sapply(pics, function(x) paste(fromdir, x, sep="/"))
-file.copy(pics, todir, overwrite = TRUE)
+# # Copy .png files to the images directory.
+# fromdir = "./figure"
+# todir = "../figure"
 
 # If you find the "{{ site.url }}" directory within the _drafts directory terribly unsightly, 
 # you can add the following line to the above script:  

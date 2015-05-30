@@ -23,27 +23,33 @@ The basic goal of this assignment is to explore the NOAA Storm Database and answ
 ### Data Processing
 
 
-```r
+{% highlight r %}
 # cleanup
 rm(list=ls())
-```
+{% endhighlight %}
 
 
-```r
+{% highlight r %}
 echo = TRUE  # Make code visible
 source("multiplot.R")  # multiplot
-```
+{% endhighlight %}
 
-```
+
+
+{% highlight text %}
 ## Warning in file(filename, "r", encoding = encoding): cannot open file
 ## 'multiplot.R': No such file or directory
-```
+{% endhighlight %}
 
-```
+
+
+{% highlight text %}
 ## Error in file(filename, "r", encoding = encoding): cannot open the connection
-```
+{% endhighlight %}
 
-```r
+
+
+{% highlight r %}
 suppressWarnings(library(plyr))
 library(knitr)
 suppressWarnings(library(ggplot2))
@@ -53,27 +59,35 @@ system.time(df <- read.csv(bzfile("repdata_data_StormData.csv.bz2"),
                            #quote = "", 
                            strip.white=TRUE,
                            stringsAsFactors = FALSE))
-```
+{% endhighlight %}
 
-```
+
+
+{% highlight text %}
 ##    user  system elapsed 
-##   94.83    0.64   95.51
-```
+##   92.49    0.52   93.29
+{% endhighlight %}
 
-```r
+
+
+{% highlight r %}
 #   user  system elapsed 
 # 469.36    3.18  656.79 << pc1
 #str(df)
 dim(df)  # 902297     37
-```
+{% endhighlight %}
 
-```
+
+
+{% highlight text %}
 ## [1] 902297     37
-```
+{% endhighlight %}
 
-```r
+
+
+{% highlight r %}
 #colnames(df)
-```
+{% endhighlight %}
 
 ## Results
 
@@ -81,7 +95,7 @@ dim(df)  # 902297     37
 
 - Select useful data
 
-```r
+{% highlight r %}
 #
 df <- df[ , c("EVTYPE", "BGN_DATE", "FATALITIES", "INJURIES", "PROPDMG", "PROPDMGEXP", "CROPDMG", "CROPDMGEXP")]
 #str(df)
@@ -94,12 +108,12 @@ df$BGN_DATE <- as.POSIXct(df$BGN_DATE,format="%m/%d/%Y %H:%M:%S")
 #unique(df$PROPDMGEXP)
 #unique(df$CROPDMGEXP)
 #
-```
+{% endhighlight %}
 
 - Create new variables: TOTAL_PROPDMG, TOTAL_CROPDMG and TOTALDMG with: TOTALDMG = (TOTAL_PROPDMG + TOTAL_CROPDMG)
 
 
-```r
+{% highlight r %}
 tmpPROPDMG <- mapvalues(df$PROPDMGEXP,
                          c("K","M","", "B","m","+","0","5","6","?","4","2","3","h","7","H","-","1","8"), 
                          c(1e3,1e6, 1, 1e9,1e6,  1,  1,1e5,1e6,  1,1e4,1e2,1e3,  1,1e7,1e2,  1, 10,1e8))
@@ -111,34 +125,40 @@ tmpCROPDMG <- mapvalues(df$CROPDMGEXP,
 df$TOTAL_PROPDMG <- as.numeric(tmpPROPDMG) * df$PROPDMG
 df$TOTAL_CROPDMG <- as.numeric(tmpCROPDMG) * df$CROPDMG
 colnames(df)
-```
+{% endhighlight %}
 
-```
+
+
+{% highlight text %}
 ##  [1] "EVTYPE"        "BGN_DATE"      "FATALITIES"    "INJURIES"     
 ##  [5] "PROPDMG"       "PROPDMGEXP"    "CROPDMG"       "CROPDMGEXP"   
 ##  [9] "TOTAL_PROPDMG" "TOTAL_CROPDMG"
-```
+{% endhighlight %}
 
-```r
+
+
+{% highlight r %}
 remove(tmpPROPDMG)
 remove(tmpCROPDMG)
 
 df$TOTALDMG <- df$TOTAL_PROPDMG + df$TOTAL_CROPDMG
 ##
 head(unique(df$EVTYPE))
-```
+{% endhighlight %}
 
-```
+
+
+{% highlight text %}
 ## [1] "TORNADO"               "TSTM WIND"             "HAIL"                 
 ## [4] "FREEZING RAIN"         "SNOW"                  "ICE STORM/FLASH FLOOD"
-```
+{% endhighlight %}
 
 ### Population health impact
 
 1. Across the United States, which types of events (as indicated in the EVTYPE variable) are most harmful with respect to population health?
 
 
-```r
+{% highlight r %}
 summary1 <- ddply(df,"EVTYPE", summarize, propdamage = sum(TOTALDMG), injuries= sum(INJURIES), fatalities = sum(FATALITIES), persdamage = sum(INJURIES)+sum(FATALITIES))
 
 summary1 <- summary1[order(summary1$propdamage, decreasing = TRUE),]
@@ -155,9 +175,9 @@ plot2 <- ggplot(data=head(summary2,10), aes(x=EVTYPE, y=persdamage, fill=persdam
   ggtitle("Effect of Severe Weather on Public Health") +
   theme(axis.text.x = element_text(angle=90, hjust=1))
 print(plot2)
-```
+{% endhighlight %}
 
-![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5-1.png) 
+![center](/../figure/PA2_peerAssessment4/unnamed-chunk-5-1.png) 
 </br>
 
 - From the above figure we can see that TORNADOES have the most significant impact on public health. 
@@ -166,7 +186,7 @@ print(plot2)
 2. Across the United States, which types of events have the greatest economic consequences?
 
 
-```r
+{% highlight r %}
 ##
 
 plot1 <- ggplot(data=head(summary1,10), aes(x=EVTYPE, y=propdamage, fill=propdamage)) + 
@@ -176,16 +196,16 @@ plot1 <- ggplot(data=head(summary1,10), aes(x=EVTYPE, y=propdamage, fill=propdam
   ggtitle("Effect of Severe Weather on the U.S. Economy") +
   theme(axis.text.x = element_text(angle=90, hjust=1))
 print(plot1)
-```
+{% endhighlight %}
 
-![plot of chunk unnamed-chunk-6](figure/unnamed-chunk-6-1.png) 
+![center](/../figure/PA2_peerAssessment4/unnamed-chunk-6-1.png) 
 </br>
 
 - The FLOODS, HURRICANES/TYPHOONES and TORNADOES are the events with the greatest economic consequences.
 
 
 
-```r
+{% highlight r %}
 summary3 <- summary1[order(summary1$"injuries", decreasing = TRUE),]
 #head(summary3,10)
 
@@ -206,25 +226,29 @@ plot4 <- ggplot(data=head(summary4,10), aes(x=EVTYPE, y=fatalities, fill=fatalit
   labs(x = "event type", y = "personal damage (fatalities)") +
   scale_fill_gradient("fatalities", low = "yellow", high = "red") + 
   theme(axis.text.x = element_text(angle=90, hjust=0.8))
-```
+{% endhighlight %}
 
 <!-- multiplot:  -->
 <!-- http://www.cookbook-r.com/Graphs/Multiple_graphs_on_one_page_%28ggplot2%29/ -->
 
 
-```r
+{% highlight r %}
 #print(plot3)
 #print(plot4)
 multiplot(plot3, plot4, cols=2)
-```
+{% endhighlight %}
 
-```
+
+
+{% highlight text %}
 ## Error in eval(expr, envir, enclos): could not find function "multiplot"
-```
+{% endhighlight %}
 
-```r
+
+
+{% highlight r %}
 #
-```
+{% endhighlight %}
 </br>
 
 - TORNADO is the harmful event with respect to population health, and 
