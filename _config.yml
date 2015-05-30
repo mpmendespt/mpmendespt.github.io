@@ -2,7 +2,7 @@
 # This file contains configuration flags to customize your site
 #
 # Name of your site (displayed in the header)
-name: On Test... (Jekyll)
+name: Manuel Mendes
 
 author: Manuel Mendes
 #github: mpmendespt
@@ -33,13 +33,15 @@ permalink:  /:categories/:title.html
 # paginate: 10
 # markdown: rdiscount
 markdown: redcarpet  
-#redcarpet:
-#  extensions: ["tables"]
+redcarpet:
+  extensions: ["tables"]
 highlighter: pygments
 
 ###############################33
 safe: true
-auto: false 
+#auto: false 
+
+exclude: ["*.Rmd"]
 
 #############################################
 
@@ -69,7 +71,7 @@ footer-links:
   linkedin: 
   pinterest: 
   dribbble: 
-  email: 
+  email: mpmendespt@yahoo.com
   #rss: Y # just type anything here for a working RSS icon, make sure you set the "url" above!
   twitter: mpmendespt
   stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"

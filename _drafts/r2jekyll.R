@@ -24,4 +24,8 @@ todir = "../figure"
 pics = list.files(fromdir, ".png")
 pics = sapply(pics, function(x) paste(fromdir, x, sep="/"))
 file.copy(pics, todir)
+
+# If you find the "{{ site.url }}" directory within the _drafts directory terribly unsightly, 
+# you can add the following line to the above script:  
 unlink("{{ site.url }}", recursive=T)
+
