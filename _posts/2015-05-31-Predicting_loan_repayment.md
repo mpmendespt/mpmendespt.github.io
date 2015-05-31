@@ -401,10 +401,14 @@ In order to evaluate the quality of an investment strategy, we need to compute t
 test$profit = exp(test$int.rate*3) - 1
 test$profit[test$not.fully.paid == 1] = -1
 # max(test$profit)*10
+ans <- max(test$profit)*10
 {% endhighlight %}
 
-What is the maximum profit of a $10 investment in any loan in the testing set (do not include the $ sign in your answer)?
+
+* What is the maximum profit of a $10 investment in any loan in the testing set (do not include the $ sign in your answer)? </br>
+
 * ANS 8.8947687
+
 <!--  ANS: 8.894769  -->
 
 > Explanation </br>
