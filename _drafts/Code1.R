@@ -20,7 +20,8 @@ filename = "PA2_peerAssessment4.Rmd"
 source("R2jekyll_v2.R")
 #fig.keep
 #################################
-
+filename = "Predicting_loan_repayment.Rmd"
+source("R2jekyll_v2.R")
 
 
 
