@@ -260,6 +260,7 @@ test$profit[test$not.fully.paid == 1] = -1
 # max(test$profit)*10
 ```
 
+
 * What is the maximum profit of a $10 investment in any loan in the testing set (do not include the $ sign in your answer)?
 
 * ANS `r max(test$profit)*10 `
