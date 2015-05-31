@@ -181,13 +181,14 @@ Baseline
 ## [1] 0.8398886
 {% endhighlight %}
 * What is the accuracy of the logistic regression model?
-ANS: 0.8364079
+
+* ANS: 0.8364079
 
 <!--  ANS: 0.8364079 -->
 
 * What is the accuracy of the baseline model?
 
-ANS: 0.8398886
+* ANS: 0.8398886
 
 <!--  ANS: 0.8398886 -->
 

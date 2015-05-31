@@ -115,13 +115,14 @@ Baseline
 
 ```
 * What is the accuracy of the logistic regression model?
-ANS: `r Acc`
+
+* ANS: `r Acc`
 
 <!--  ANS: 0.8364079 -->
 
 * What is the accuracy of the baseline model?
 
-ANS: `r Baseline`
+* ANS: `r Baseline`
 
 <!--  ANS: 0.8398886 -->
 
