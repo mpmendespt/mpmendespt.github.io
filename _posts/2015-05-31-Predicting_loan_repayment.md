@@ -366,7 +366,7 @@ While thus far we have predicted if a loan will be paid back or not, an investor
 To compute interest revenue, consider a $c investment in a loan that has an annual interest rate r over a period of t years. Using continuous compounding of interest, this investment pays back c * exp(rt) dollars by the end of the t years, where exp(rt) is e raised to the r*t power. </br>
 How much does a $10 investment with an annual interest rate of 6% pay back after 3 years, using continuous compounding of interest? Hint: remember to convert the percentage to a proportion before doing the math. Enter the number of dollars, without the $ sign. </br>
 
-c * exp(rt)
+$$c^(r*t)$$
 
 
 
