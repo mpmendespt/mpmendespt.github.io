@@ -64,7 +64,7 @@ model0 <-glm(not.fully.paid ~. , data = train, family = "binomial")
 
 2.
 Consider two loan applications, which are identical other than the fact that the borrower in Application A has FICO credit score 700 while the borrower in Application B has FICO credit score 710.
-Let Logit(A) be the log odds of loan A not being paid back in full, according to our logistic regression model, and define Logit(B) similarly for loan B. What is the value of Logit(A) - Logit(B)?
+Let Logit(A) be the log odds of loan A not being paid back in full, according to our logistic regression model, and define Logit(B) similarly for loan B. 
 
 * Logit = belta'*x
 * Logit(A) - Logit(B) = belta'*(x(A)-x(B))
@@ -76,17 +76,19 @@ ans1
 
 ```
 * What is the value of Logit(A) - Logit(B)?
-ANS: `r ans1`
+
+* ANS: `r ans1`
 
 <!--  ANS: 0.09406 -->
 
 Now, let O(A) be the odds of loan A not being paid back in full, according to our logistic regression model, and define O(B) similarly for loan B. What is the value of O(A)/O(B)? (HINT: Use the mathematical rule that exp(A + B + C) = exp(A)*exp(B)*exp(C). Also, remember that exp() is the exponential function in R.) </br>
 
-* What is the value of O(A)/O(B)? 
 ```{r}
 ans2 <- exp(logA)/exp(logB)
 ans2
 ```
+
+* What is the value of O(A)/O(B)? 
 
 * ANS: `r ans2`
 
@@ -225,10 +227,10 @@ as.numeric(performance(prediction.bivariate, "auc")@y.values)
 ### 5. Computing the Profitability of an Investment
 
 While thus far we have predicted if a loan will be paid back or not, an investor needs to identify loans that are expected to be profitable. If the loan is paid back in full, then the investor makes interest on the loan. However, if the loan is not paid back, the investor loses the money invested. Therefore, the investor should seek loans that best balance this risk and reward.
-To compute interest revenue, consider a $c investment in a loan that has an annual interest rate r over a period of t years. Using continuous compounding of interest, this investment pays back c * exp(rt) dollars by the end of the t years, where exp(rt) is e raised to the r*t power.
+To compute interest revenue, consider a $c investment in a loan that has an annual interest rate r over a period of t years. Using continuous compounding of interest, this investment pays back c * exp(rt) dollars by the end of the t years, where exp(rt) is e raised to the r*t power. </br>
 How much does a $10 investment with an annual interest rate of 6% pay back after 3 years, using continuous compounding of interest? Hint: remember to convert the percentage to a proportion before doing the math. Enter the number of dollars, without the $ sign. </br>
 
-$$ c^(rt) $$
+c * exp(rt)
 
 
 ```{r}
