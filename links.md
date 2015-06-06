@@ -9,7 +9,7 @@ permalink: /links/
 * [MPM Electrónica] (http://mpmendes-electronica.blogspot.pt/)
 * [Destaques…”Recortes”…Arquivo…] (http://mpmendespt.blogspot.pt/)
 * [Trading Ideas] (http://mpmendespt-trading.blogspot.pt/)
-* [Apontamentos Virtuais] (http://apontamentos-virtuais.blogspot.pt/)
+* [Apontamentos Virtuais] (http://apontamentos-virtuais.blogspot.pt/)   
 ***
 * [R-bloggers](http://www.r-bloggers.com/)
 * [Freakonometrics | An Open Lab-Notebook Experiment] (http://freakonometrics.hypotheses.org/) 
