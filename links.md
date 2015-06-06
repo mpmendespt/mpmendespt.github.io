@@ -24,4 +24,6 @@ permalink: /links/
 * [CS276: Information Retrieval and Web Search] (http://web.stanford.edu/class/cs276/)
 * [GivenTheData: R and the web (for beginners)] (http://giventhedata.blogspot.pt/2012/08/r-and-web-for-beginners-part-iii.html)
 
-
+* {:.cls} This item has the class "cls".
+  Here continues the above paragraph.
+* This is a normal list item.
