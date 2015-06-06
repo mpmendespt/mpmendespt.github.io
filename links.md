@@ -10,9 +10,9 @@ permalink: /links/
 * [Destaques…”Recortes”…Arquivo…] (http://mpmendespt.blogspot.pt/)
 * [Trading Ideas] (http://mpmendespt-trading.blogspot.pt/)
 * [Apontamentos Virtuais] (http://apontamentos-virtuais.blogspot.pt/)
+***
 * [R-bloggers](http://www.r-bloggers.com/)
-* [Freakonometrics | An Open Lab-Notebook Experiment] (http://freakonometrics.hypotheses.org/)    
-*** 
+* [Freakonometrics | An Open Lab-Notebook Experiment] (http://freakonometrics.hypotheses.org/) 
 * [Blog with RStudio, R, RMarkdown, Jekyll and Github. – Andy South - Norwich, UK.] (http://andysouth.github.io/blog-setup/)
 * [SchmidtHappens | Add Disqus Comments to Your Jekyll Powered Blog] (http://schmidt-happens.com/articles/2011/09/26/adding-disqus-comments.html)
 * [Jpegtran -scale lossless resize] (http://jpegclub.org/jpegtran/)   
