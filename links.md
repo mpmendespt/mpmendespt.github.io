@@ -11,6 +11,8 @@ permalink: /links/
 * [Trading Ideas] (http://mpmendespt-trading.blogspot.pt/)
 * [Apontamentos Virtuais] (http://apontamentos-virtuais.blogspot.pt/)   
 * * *
+* [A Very Short History Of Data Science] (http://www.forbes.com/sites/gilpress/2013/05/28/a-very-short-history-of-data-science/)
+* * *
 * [R-bloggers](http://www.r-bloggers.com/)
 * [Freakonometrics | An Open Lab-Notebook Experiment] (http://freakonometrics.hypotheses.org/) 
 * [Blog with RStudio, R, RMarkdown, Jekyll and Github] (http://andysouth.github.io/blog-setup/)
