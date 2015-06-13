@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Links
+category: Links
 permalink: /links/
 ---
 
@@ -33,4 +34,6 @@ permalink: /links/
 * [Policy functions and value functions under multiple uncertainty] (http://www.carlboettiger.info/2012/06/13/Sethi-policy-functions.html)
 * [Introducing the streamR package] (http://pablobarbera.com/blog/archives/1.html)  
 * * *
+* [PH525x series - Biomedical Data Science] (http://genomicsclass.github.io/book/)
+
 

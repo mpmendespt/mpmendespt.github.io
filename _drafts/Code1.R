@@ -22,7 +22,9 @@ source("R2jekyll_v2.R")
 #################################
 filename = "Predicting_loan_repayment.Rmd"
 source("R2jekyll_v2.R")
-
+#####
+filename = "Map-visualization.Rmd"
+source("R2jekyll_v2.R", encoding='UTF-8')
 
 
 
