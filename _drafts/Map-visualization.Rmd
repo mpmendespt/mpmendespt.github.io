@@ -9,8 +9,8 @@ category: R
 Here I tried to produce some map visualization in R.   
 
 * First using data from [GADM database of Global Administrative Areas] (http://gadm.org/).           
-* Second using the package RWorldMap, and            
-* Third using the package ggmap that allows visualizations of spatial data on maps retrieved from Google Maps, OpenStreetMap, etc.      
+* Second using the package RWorldMap,              
+* Third using the package ggmap that allows visualizations of spatial data on maps retrieved from Google Maps, OpenStreetMap, etc., and           
 * Fourth using the package RgoogleMaps allows you to plot data points on any kind  of map you can imagine  (terrain, satellite, hybrid).
 
 # 1. Data from GADM database
@@ -204,6 +204,8 @@ PlotOnStaticMap(terrmap)
 
 # Sard <- geocode("Sardoal, PT") # find coordinates
 # Sard
+#         lon      lat
+# 1 -8.161277 39.53752
 
 # using maps to plot routes
 rt1 = route(from = "Lisbon", to = "Castelo Branco", mode = "driving")
