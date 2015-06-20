@@ -56,13 +56,13 @@ WDIsearch(string = 'GDP per capita')
 
 ### Visualizing GDP per capita
 
-Below we import the data on GDP per capita from years 1980 to 2014 from some countries and we show a simple plot of it.
+Below we import the data on GDP per capita from years 1980 to 2013 from some countries and we show a simple plot of it.
 
 
 {% highlight r %}
 dat <- WDI(indicator = c("NY.GDP.PCAP.KD"),    
            country = c("PT","ES", "US", "EU", "BR"),     
-           start = 1980, end = 2014)
+           start = 1980, end = 2013)
 #
 ggplot(dat, aes(year, NY.GDP.PCAP.KD, color = country)) + 
     geom_line() + geom_point() + 
