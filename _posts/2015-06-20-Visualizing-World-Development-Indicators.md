@@ -72,10 +72,6 @@ ggplot(dat, aes(year, NY.GDP.PCAP.KD, color = country)) +
 
 ![plot of chunk unnamed-chunk-2](/../figure/Visualizing-World-Development-Indicators/unnamed-chunk-2-1.png) 
 
-{% highlight r %}
-    #labs(title="GDP per capita")
-{% endhighlight %}
-
 
 
 ### References    

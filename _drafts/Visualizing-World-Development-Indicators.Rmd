@@ -34,8 +34,7 @@ ggplot(dat, aes(year, NY.GDP.PCAP.KD, color = country)) +
     geom_line() + geom_point() + 
     labs(x = "year", y = "GDP per capita") + 
     ggtitle("GDP per capita by Country")
-    #labs(title="GDP per capita")
-
+   
 ```
 
 
