@@ -67,7 +67,7 @@ dat <- WDI(indicator = c("NY.GDP.PCAP.KD"),
 ggplot(dat, aes(year, NY.GDP.PCAP.KD, color = country)) + 
     geom_line() + geom_point() + 
     labs(x = "year", y = "GDP per capita") + 
-    labs(title="GDP per capita by country")
+    labs(title="GDP per capita")
 {% endhighlight %}
 
 ![plot of chunk unnamed-chunk-2](/../figure/Visualizing-World-Development-Indicators/unnamed-chunk-2-1.png) 
