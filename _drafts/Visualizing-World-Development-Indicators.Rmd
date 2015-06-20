@@ -41,5 +41,8 @@ ggplot(dat, aes(year, NY.GDP.PCAP.KD, color = country)) +
 
 ### References    
 * [Fetching Public Data With R] (http://rstudio-pubs-static.s3.amazonaws.com/24858_1f006c3965614b0099c963913100e9f0.html)    
-* [http://markuskainu.fi/workshop/data_analyysi/workshop.html] (http://markuskainu.fi/workshop/data_analyysi/workshop.html)
+* [http://markuskainu.fi/workshop/data_analyysi/workshop.html] (http://markuskainu.fi/workshop/data_analyysi/workshop.html)    
+* [http://cran.r-project.org/web/packages/WDI/index.html] (http://cran.r-project.org/web/packages/WDI/index.html)
+
+
 
