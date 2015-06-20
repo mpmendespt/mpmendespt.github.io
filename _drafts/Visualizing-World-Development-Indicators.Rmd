@@ -33,7 +33,7 @@ dat <- WDI(indicator = c("NY.GDP.PCAP.KD"),
 ggplot(dat, aes(year, NY.GDP.PCAP.KD, color = country)) + 
     geom_line() + geom_point() + 
     labs(x = "year", y = "GDP per capita") + 
-    ggtitle("GDP per capita by Country")
+    ggtitle("GDP per capita by Country (constant 2000 US$)")
    
 ```
 
