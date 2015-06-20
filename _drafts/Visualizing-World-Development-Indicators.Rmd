@@ -1,0 +1,45 @@
+---
+title: "Visualizing World Development Indicators"
+author: "Manuel Mendes"
+date: "Saturday, June 20, 2015"
+layout: post
+category: R WDI GDP
+---
+
+### Fetching Data from World Bank
+
+The Package WDI (world development indicators) is used to fetch data from WDI.    
+We can search the data as follow:
+
+```{r, message=F, warning=F}
+# Load required libraries
+library('WDI')
+library(ggplot2)
+
+# Search
+WDIsearch(string = 'GDP per capita')
+
+```
+
+### Visualizing GDP per capita
+
+Below we import the data on GDP per capita from years 1980 to 2014 from some countries and we show a simple plot of it.
+
+```{r, message=F, warning=F}
+dat <- WDI(indicator = c("NY.GDP.PCAP.KD"),    
+           country = c("PT","ES", "US", "EU", "BR"),     
+           start = 1980, end = 2014)
+#
+ggplot(dat, aes(year, NY.GDP.PCAP.KD, color = country)) + 
+    geom_line() + geom_point() + 
+    labs(x = "year", y = "GDP per capita") + 
+    labs(title="GDP per capita by country")
+
+```
+
+
+
+### References    
+* [Fetching Public Data With R] (http://rstudio-pubs-static.s3.amazonaws.com/24858_1f006c3965614b0099c963913100e9f0.html)    
+* [http://markuskainu.fi/workshop/data_analyysi/workshop.html] (http://markuskainu.fi/workshop/data_analyysi/workshop.html)
+

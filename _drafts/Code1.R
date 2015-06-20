@@ -25,6 +25,12 @@ source("R2jekyll_v2.R")
 #####
 filename = "Map-visualization.Rmd"
 source("R2jekyll_v2.R", encoding='UTF-8')
+#
+#  D:\DL\_DL_\_ELECTRONICA_\_ESTUDO_3\_Blog with RStudio_\mpmendespt.github.io
+#
+filename = "Visualizing-World-Development-Indicators.Rmd"
+source("R2jekyll_v2.R", encoding='UTF-8')
+
 
 
 
