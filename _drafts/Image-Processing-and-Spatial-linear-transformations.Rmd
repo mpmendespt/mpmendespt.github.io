@@ -1,0 +1,234 @@
+---
+title: "Image Processing and Spatial linear transformations"
+author: "Manuel Mendes"
+date: "Monday, June 22, 2015"
+layout: post
+category: R Mathematics Image Processing Matrix Operation
+---
+
+We can think of an **image** as a function, f, from  $$\pmb R^2 \rightarrow  R$$ (or a 2D signal):    
+
+- f (x,y) gives the **intensity** at position (x,y)
+
+Realistically, we expect the image only to be defined over a rectangle, with a finite range:    
+f: [a,b]x[c,d] -> [0,1]
+
+A color image is just three functions pasted together. We can write this as a “vector-valued” function:
+
+$$\pmb {f(x,y)} = \bigg[ \begin{array}
+{c}
+& r(x,y) \cr \\
+& g(x,y) \cr \\
+& b(x,y) 
+\end{array} \bigg] 
+$$
+
+### Image Processing
+
+The package **EBImage** is an R package which provides general purpose functionality for the reading, writing, processing and analysis of images.
+
+
+```{r}
+# source("http://bioconductor.org/biocLite.R")
+# biocLite()
+# biocLite("EBImage")
+
+# Reading Image
+img <- readImage("images/lena_std.tif")
+
+#str(img1)
+dim(img)
+display(img, method = "raster")
+
+
+```
+
+* Image Properties
+
+Images are stored as multi-dimensional arrays containing the pixel intensities. All EBImage functions are also able to work with matrices and arrays. 
+
+```{r}
+print(img1)
+```
+
+* Adjusting Brightness
+
+```{r}
+img1 <- img + 0.2
+img2 <- img - 0.3
+display(img1, method = "raster")
+display(img2, method = "raster")
+```
+
+* Adjusting Contrast
+
+```{r}
+img1 <- img * 0.5
+img2 <- img * 2
+display(img1, method = "raster")
+display(img2, method = "raster")
+```
+
+* Gamma Correction
+
+```{r}
+img1 <- img ^ 4
+img2 <- img ^ 0.9
+img3 <- (img + 0.2) ^3
+display(img1, method = "raster")
+display(img2, method = "raster")
+display(img3, method = "raster")
+```
+
+* Cropping Image
+
+```{r}
+img1 <-img[(1:400)+100, 1:400,]
+display(img1, method = "raster")
+```
+
+### Spatial Transformation
+
+Spatial image transformations are done with the functions resize, rotate, translate and the functions flip and flop to reflect images.
+
+Next we show the functions flip, flop, rotate and translate:
+```{r}
+y <- flip(img)
+display(y, title='flip(img)', method = "raster")
+
+y = flop(img) 
+display(y, title='flop(img)', method = "raster")
+
+y <- rotate(img, 30) 
+display(y, title='rotate(img, 30)', method = "raster")
+
+y <- translate(img, c(120, -20)) 
+display(y, title='translate(img, c(120, -20))', method = "raster")
+
+```
+
+
+#### All spatial transforms except flip and flop are based on the general affine transformation.
+
+Linear transformations using the function **affine**:     
+
+*  **Horizontal flip**
+
+$${m} = \left[ 
+\begin{array}{cc}
+\ -1 & 0 \cr \\
+\ 0 & 1 
+\end{array}
+\right] 
+$$
+
+$$
+\begin{equation}
+   Result = image * m
+\end{equation}
+$$
+
+
+```{r}
+m <- matrix(c(-1, 0, 0, 1, 512, 0), nrow=3,  ncol=2, byrow = TRUE)
+m  # Horizontal flip
+display(affine(img, m),  method = "raster")
+```
+
+*  **Horizontal shear**
+$${m} = \left[ 
+\begin{array}{cc}
+1, 1/2 \cr \\
+0, 1 
+\end{array}
+\right] 
+$$
+
+
+```{r}
+m <- matrix(c(1, 1/2, 0, 1, 0, -100), nrow=3,  ncol=2, byrow = TRUE)
+m  # horizontal shear  r = 1/2 
+display(affine(img, m),  method = "raster")
+```
+
+*  **Rotation by π/6**
+$${m} = \left[ 
+\begin{array}{cc}
+cos(pi/6), -sin(pi/6) \cr \\
+sin(pi/6), cos(pi/6)
+\end{array}
+\right] 
+$$
+
+```{r}
+m <- matrix(c(cos(pi/6), -sin(pi/6), sin(pi/6) , cos(pi/6), -100, 100), nrow=3,  ncol=2, byrow = TRUE)
+m  # Rotation by π/6
+display(affine(img, m),  method = "raster")
+```
+
+*  **Squeeze mapping with r=3/2**
+$${m} = \left[ 
+\begin{array}{cc}
+3/2, 0 \cr \\
+0, 2/3
+\end{array}
+\right] 
+$$
+
+```{r}
+m <- matrix(c(3/2, 0, 0, 2/3, 0, 100), nrow=3,  ncol=2, byrow = TRUE)
+m  # Squeeze mapping with r=3/2
+display(affine(img, m),  method = "raster")
+```
+
+*  **Scaling by a factor of 3/2**
+$${m} = \left[ 
+\begin{array}{cc}
+3/2, 0 \cr \\
+0, 3/2
+\end{array}
+\right] 
+$$
+
+```{r}
+m <- matrix(c(3/2, 0, 0, 3/2, -100, -100), nrow=3,  ncol=2, byrow = TRUE)
+m  # Scaling by a factor of 3/2
+display(affine(img, m),  method = "raster")
+```
+
+*  **Scaleing horizontally by a factor of 1/2** 
+$${m} = \left[ 
+\begin{array}{cc}
+1/2, 0 \cr \\
+0, 1
+\end{array}
+\right] 
+$$
+
+```{r}
+m <- matrix(c(1/2, 0, 0, 1, 0, 0), nrow=3,  ncol=2, byrow = TRUE)
+m  # scale a figure horizontally  r = 1/2 
+display(affine(img, m),  method = "raster")
+```
+
+
+### References
+
+* [http://www.iitg.ernet.in/scifac/qip/public_html/cd_cell/chapters/dig_image_processin.pdf](http://www.iitg.ernet.in/scifac/qip/public_html/cd_cell/chapters/dig_image_processin.pdf)
+* [http://www.math.ksu.edu/research/i-center/UndergradScholars/manuscripts/FernandoRoman.pdf](http://www.math.ksu.edu/research/i-center/UndergradScholars/manuscripts/FernandoRoman.pdf)
+* [http://www.statpower.net/Content/310/R%20Stuff/SampleMarkdown.html](http://www.statpower.net/Content/310/R%20Stuff/SampleMarkdown.html)
+* [http://linear.ups.edu/html/section-LT.html](http://linear.ups.edu/html/section-LT.html)
+* [http://www.r-bloggers.com/r-image-analysis-using-ebimage/](http://www.r-bloggers.com/r-image-analysis-using-ebimage/)
+* [http://www.maa.org/external_archive/joma/Volume8/Kalman/Linear3.html](http://www.maa.org/external_archive/joma/Volume8/Kalman/Linear3.html)
+* [https://en.wikipedia.org/wiki/Linear_map](https://en.wikipedia.org/wiki/Linear_map)
+* [https://en.wikipedia.org/wiki/Matrix_%28mathematics%29](https://en.wikipedia.org/wiki/Matrix_%28mathematics%29)
+* [https://en.wikipedia.org/wiki/Affine_transformation](https://en.wikipedia.org/wiki/Affine_transformation)
+
+
+
+
+
+
+
+
+
