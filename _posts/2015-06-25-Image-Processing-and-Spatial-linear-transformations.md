@@ -359,7 +359,7 @@ display(affine(img, m),  method = "raster")
 
 ![plot of chunk unnamed-chunk-12](/../figure/Image-Processing-and-Spatial-linear-transformations/unnamed-chunk-12-1.png) 
 
-*  **Scaleing horizontally by a factor of 1/2** 
+*  **Scaling horizontally by a factor of 1/2** 
 $${m} = \left[ 
 \begin{array}{cc}
 1/2, 0 \cr \\

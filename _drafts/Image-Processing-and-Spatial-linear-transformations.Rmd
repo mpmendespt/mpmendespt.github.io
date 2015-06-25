@@ -196,7 +196,7 @@ m  # Scaling by a factor of 3/2
 display(affine(img, m),  method = "raster")
 ```
 
-*  **Scaleing horizontally by a factor of 1/2** 
+*  **Scaling horizontally by a factor of 1/2** 
 $${m} = \left[ 
 \begin{array}{cc}
 1/2, 0 \cr \\
