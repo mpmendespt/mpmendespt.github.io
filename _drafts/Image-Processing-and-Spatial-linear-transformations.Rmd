@@ -43,12 +43,12 @@ display(img, method = "raster")
 
 ```
 
-* Image Properties
+#### Image Properties
 
 Images are stored as multi-dimensional arrays containing the pixel intensities. All EBImage functions are also able to work with matrices and arrays. 
 
 ```{r}
-print(img1)
+print(img)
 ```
 
 * Adjusting Brightness

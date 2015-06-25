@@ -55,13 +55,13 @@ display(img, method = "raster")
 
 ![plot of chunk unnamed-chunk-1](/../figure/Image-Processing-and-Spatial-linear-transformations/unnamed-chunk-1-1.png) 
 
-* Image Properties
+#### Image Properties
 
 Images are stored as multi-dimensional arrays containing the pixel intensities. All EBImage functions are also able to work with matrices and arrays. 
 
 
 {% highlight r %}
-print(img1)
+print(img)
 {% endhighlight %}
 
 
@@ -70,17 +70,17 @@ print(img1)
 ## Image 
 ##   colorMode    : Color 
 ##   storage.mode : double 
-##   dim          : 400 400 3 
+##   dim          : 512 512 3 
 ##   frames.total : 3 
 ##   frames.render: 1 
 ## 
 ## imageData(object)[1:5,1:6,1]
 ##           [,1]      [,2]      [,3]      [,4]      [,5]      [,6]
-## [1,] 0.6784314 0.6784314 0.6784314 0.6784314 0.6784314 0.6784314
-## [2,] 0.6823529 0.6823529 0.6823529 0.6823529 0.6823529 0.7019608
-## [3,] 0.7019608 0.7019608 0.7019608 0.7019608 0.7019608 0.6980392
-## [4,] 0.7058824 0.7058824 0.7058824 0.7058824 0.7058824 0.7019608
-## [5,] 0.6941176 0.6941176 0.6941176 0.6941176 0.6941176 0.6901961
+## [1,] 0.8862745 0.8862745 0.8862745 0.8862745 0.8862745 0.8901961
+## [2,] 0.8862745 0.8862745 0.8862745 0.8862745 0.8862745 0.8901961
+## [3,] 0.8745098 0.8745098 0.8745098 0.8745098 0.8745098 0.8901961
+## [4,] 0.8745098 0.8745098 0.8745098 0.8745098 0.8745098 0.8705882
+## [5,] 0.8862745 0.8862745 0.8862745 0.8862745 0.8862745 0.8862745
 {% endhighlight %}
 
 * Adjusting Brightness
