@@ -35,5 +35,12 @@ permalink: /links/
 * [Introducing the streamR package] (http://pablobarbera.com/blog/archives/1.html)  
 * * *
 * [PH525x series - Biomedical Data Science] (http://genomicsclass.github.io/book/)
+* * *
+* [LaTeX Cookbook] (http://www.personal.ceu.hu/tex/cookbook.html)   
+* [TEX Commands available in MathJax] (http://www.onemathematicalcat.org/MathJaxDocumentation/TeXSyntax.htm)   
+* [Image Analysis Presentation] (https://github.com/tleonardi/image_analysis_in_R/blob/master/presentation/image_analysis_presentation.md)   
+* [R Presentation] (https://rstudio-pubs-static.s3.amazonaws.com/57625_d84d0f0cd9f9490cb2b0e48a4c5f2bf9.html)   
+* [Image Processing Algorithms] (http://nir.bendvora.com/Work/ImageProc/index.html)   
+
 
 

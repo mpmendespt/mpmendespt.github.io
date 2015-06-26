@@ -23,6 +23,54 @@ $$\pmb {f(x,y)} = \bigg[ \begin{array}
 \end{array} \bigg] 
 $$
 
+* Computing Transformations
+
+If you have a transformation matrix you can evaluate the transformation that would be performed by multiplying the transformation matrix by the original array of points.     
+
+### Examples of Transformations in 2D Graphics
+
+In 2D graphics Linear transformations can be represented by 2x2 matrices. Most common transformations such as rotation, scaling, shearing, and reflection are linear transformations and can be represented in the 2x2 matrix. Other affine transformations can be represented in a 3x3 matrix. 
+
+#### Rotation
+For rotation by an angle θ clockwise about the origin, the functional form is x' = xcosθ + ysinθ     
+and y' = − xsinθ + ycosθ. Written in matrix form, this becomes:    
+$$
+&#10;\begin{bmatrix} x&#39; \cr \\
+y&#39; \end{bmatrix} = \begin{bmatrix} \cos \theta &amp;  \sin\theta \cr \\
+-\sin \theta &amp; \cos \theta \end{bmatrix} \begin{bmatrix} x \cr \\
+y \end{bmatrix}&#10;
+$$
+
+#### Scaling
+For scaling we have x&#39; = sx . x and y&#39; = sy . y. The matrix form is:         
+$$
+&#10;\begin{bmatrix} x&#39; \cr \\
+y&#39; \end{bmatrix} = \begin{bmatrix} sx &amp; 0 \cr \\
+0 &amp; sy \end{bmatrix} \begin{bmatrix} x \cr \\
+y \end{bmatrix}&#10;
+$$
+
+#### Shearing
+For shear mapping (visually similar to slanting), there are two possibilities.    
+For a shear parallel to the x axis has x&#39; = x + ky and y&#39; = y ; the shear matrix, applied to column vectors, is:    
+$$
+&#10;\begin{bmatrix} x&#39; \cr \\
+y&#39; \end{bmatrix} = \begin{bmatrix} 1 &amp; k \cr \\
+0 &amp; 1 \end{bmatrix} \begin{bmatrix} x \cr \\
+y \end{bmatrix}&#10;
+$$
+
+A shear parallel to the y axis has x&#39; = x and y&#39; = y + kx , which has matrix form:    
+$$
+&#10;\begin{bmatrix} x&#39; \cr \\
+y&#39; \end{bmatrix} = \begin{bmatrix} 1 &amp; 0 \cr \\
+k &amp; 1 \end{bmatrix} \begin{bmatrix} x \cr \\
+y \end{bmatrix}&#10;
+$$
+
+
+
+
 ### Image Processing
 
 The package **EBImage** is an R package which provides general purpose functionality for the reading, writing, processing and analysis of images.
@@ -33,6 +81,7 @@ The package **EBImage** is an R package which provides general purpose functiona
 # source("http://bioconductor.org/biocLite.R")
 # biocLite()
 # biocLite("EBImage")
+library(EBImage)
 
 # Reading Image
 img <- readImage("images/lena_std.tif")
@@ -402,7 +451,9 @@ display(affine(img, m),  method = "raster")
 * [http://www.maa.org/external_archive/joma/Volume8/Kalman/Linear3.html](http://www.maa.org/external_archive/joma/Volume8/Kalman/Linear3.html)
 * [https://en.wikipedia.org/wiki/Linear_map](https://en.wikipedia.org/wiki/Linear_map)
 * [https://en.wikipedia.org/wiki/Matrix_%28mathematics%29](https://en.wikipedia.org/wiki/Matrix_%28mathematics%29)
-* [https://en.wikipedia.org/wiki/Affine_transformation](https://en.wikipedia.org/wiki/Affine_transformation)
+* [https://en.wikipedia.org/wiki/Affine_transformation](https://en.wikipedia.org/wiki/Affine_transformation)     
+* [http://mathforum.org/mathimages/index.php/Transformation_Matrix](http://mathforum.org/mathimages/index.php/Transformation_Matrix)   
+
 
 
 
