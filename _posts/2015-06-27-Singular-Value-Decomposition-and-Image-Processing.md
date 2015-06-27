@@ -196,7 +196,7 @@ dim(d)
 
 
 {% highlight r %}
-plot(1:length(r.svd$d), r.svd$d, xlab="i-th r.svd$d", ylab="r.svd$d", main="Singular Values" ) # check svd$d values 
+# check svd$d values 
 # Plot the magnitude of the singular values
 sigmas = r.svd$d # diagonal matrix (the entries of which are known as singular values)
 plot(1:length(r.svd$d), r.svd$d, xlab="i-th r.svd$d", ylab="r.svd$d",  main="Singular Values");
@@ -318,7 +318,7 @@ for(i in neig){
 * Singluar Value k = 50     
 ![plot of chunk unnamed-chunk-7](/../figure/Singular-Value-Decomposition-and-Image-Processing/unnamed-chunk-7-4.png)      
 * Singluar Value k = 100        
-![plot of chunk unnamed-chunk-7](/../figure/Singular-Value-Decomposition-and-Image-Processing/unnamed-chunk-7-5.png) 
+![plot of chunk unnamed-chunk-7](/../figure/Singular-Value-Decomposition-and-Image-Processing/unnamed-chunk-7-5.png)    
 
 * Analysis
 

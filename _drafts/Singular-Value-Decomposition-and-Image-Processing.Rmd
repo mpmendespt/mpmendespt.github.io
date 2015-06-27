@@ -110,7 +110,7 @@ dim(d)
 * Plot the magnitude of the singular values
 
 ```{r}
-plot(1:length(r.svd$d), r.svd$d, xlab="i-th r.svd$d", ylab="r.svd$d", main="Singular Values" ) # check svd$d values 
+# check svd$d values 
 # Plot the magnitude of the singular values
 sigmas = r.svd$d # diagonal matrix (the entries of which are known as singular values)
 plot(1:length(r.svd$d), r.svd$d, xlab="i-th r.svd$d", ylab="r.svd$d",  main="Singular Values");
@@ -224,7 +224,7 @@ With only 10% of the real data we are able to create a very good approximation o
 * [http://blog.translucentcomputing.com/2014/03/principal-component-analysis-for.html](http://blog.translucentcomputing.com/2014/03/principal-component-analysis-for.html)     
 * [http://www.ats.ucla.edu/stat/r/pages/svd_demos.htm](http://www.ats.ucla.edu/stat/r/pages/svd_demos.htm)     
 * [http://www.r-bloggers.com/image-compression-with-the-svd-in-r/](http://www.r-bloggers.com/image-compression-with-the-svd-in-r/)    
-* [https://github.com/linfengzhou/linfengzhou.github.io/blob/master/Image%20Compression%20with%20the%20SVD%20in%20R.md](https://github.com/linfengzhou/linfengzhou.github.io/blob/master/Image%20Compression%20with%20the%20SVD%20in%20R.md)    
+   
 
 
 
