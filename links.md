@@ -15,6 +15,7 @@ permalink: /links/
 * [A Very Short History Of Data Science] (http://www.forbes.com/sites/gilpress/2013/05/28/a-very-short-history-of-data-science/)   
 * * *
 * [16 Free Data Science Books] (http://www.wzchen.com/data-science-books)      
+* [How can I become a data scientist?] (http://www.quora.com/How-can-I-become-a-data-scientist?redirected_qid=59455)      
 * * *
 * [R-bloggers](http://www.r-bloggers.com/)
 * [Freakonometrics | An Open Lab-Notebook Experiment] (http://freakonometrics.hypotheses.org/) 
