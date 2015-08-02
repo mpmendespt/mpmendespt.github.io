@@ -44,6 +44,9 @@ permalink: /links/
 * [Image Analysis Presentation] (https://github.com/tleonardi/image_analysis_in_R/blob/master/presentation/image_analysis_presentation.md)   
 * [R Presentation] (https://rstudio-pubs-static.s3.amazonaws.com/57625_d84d0f0cd9f9490cb2b0e48a4c5f2bf9.html)   
 * [Image Processing Algorithms] (http://nir.bendvora.com/Work/ImageProc/index.html)   
+* * *     
+* [DataPyR] (https://datapyr.zeef.com/kranthi.kumar)    
+
 
 
 
