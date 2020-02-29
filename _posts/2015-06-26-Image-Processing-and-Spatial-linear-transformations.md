@@ -43,7 +43,8 @@ $$
 
 
 #### Scaling
-For scaling we have \\( x&#39; = s\_x \cdot x \\) and \\( y&#39; = s\_y \cdot y \\). The matrix form is:         
+For scaling we have \\( x&#39; = s\_x \cdot x \\) and \\( y&#39; = s\_y \cdot y \\). The matrix form is:       
+
 $$
 &#10;\begin{bmatrix} x&#39; \cr \\
 y&#39; \end{bmatrix} = \begin{bmatrix} s\_x &amp; 0 \cr \\
@@ -54,6 +55,7 @@ $$
 #### Shearing
 For shear mapping (visually similar to slanting), there are two possibilities.    
 For a shear parallel to the x axis has \\( x&#39; = x + ky \\) and \\( y&#39; = y \\) ; the shear matrix, applied to column vectors, is:    
+
 $$
 &#10;\begin{bmatrix} x&#39; \cr \\
 y&#39; \end{bmatrix} = \begin{bmatrix} 1 &amp; k \cr \\
@@ -62,6 +64,7 @@ y \end{bmatrix}&#10;
 $$
 
 A shear parallel to the y axis has \\( x&#39; = x \\) and \\( y&#39; = y + kx \\) , which has matrix form:    
+
 $$
 &#10;\begin{bmatrix} x&#39; \cr \\
 y&#39; \end{bmatrix} = \begin{bmatrix} 1 &amp; 0 \cr \\
