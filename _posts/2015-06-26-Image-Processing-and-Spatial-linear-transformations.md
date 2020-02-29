@@ -41,6 +41,7 @@ y&#39; \end{bmatrix} = \begin{bmatrix} \cos \theta &amp;  \sin\theta \cr \\
 y \end{bmatrix}&#10;
 $$
 
+
 #### Scaling
 For scaling we have \\( x&#39; = s\_x \cdot x \\) and \\( y&#39; = s\_y \cdot y \\). The matrix form is:         
 $$
