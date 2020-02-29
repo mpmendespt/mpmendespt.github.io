@@ -34,8 +34,8 @@ In 2D graphics Linear transformations can be represented by 2x2 matrices. Most c
 #### Rotation
 For rotation by an angle θ clockwise about the origin, the functional form is \\( x' = xcosθ + ysinθ \\)      
 and \\( y' = − xsinθ + ycosθ \\). Written in matrix form, this becomes:    
-$$
-&#10;\begin{bmatrix} x&#39; \cr \\
+$$   
+\begin{bmatrix} x&#39; \cr \\
 y&#39; \end{bmatrix} = \begin{bmatrix} \cos \theta &amp;  \sin\theta \cr \\
 -\sin \theta &amp; \cos \theta \end{bmatrix} \begin{bmatrix} x \cr \\
 y \end{bmatrix}&#10;
