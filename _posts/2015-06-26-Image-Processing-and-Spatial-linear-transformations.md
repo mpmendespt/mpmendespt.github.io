@@ -40,15 +40,15 @@ $$
 
 
 #### Scaling
-For scaling we have \\( x&#39; = s\_x \cdot x \\) and \\( y&#39; = s\_y \cdot y \\). The matrix form is:         
+For scaling we have \\( x'; = s\_x \cdot x \\) and \\( y'; = s\_y \cdot y \\). The matrix form is:         
 $$ \begin{bmatrix} x' \cr \ y' \end{bmatrix} = \begin{bmatrix} s_x & 0 \cr \ 0 & s_y \end{bmatrix} \begin{bmatrix} x \cr \ y \end{bmatrix} $$
 
 #### Shearing
 For shear mapping (visually similar to slanting), there are two possibilities.    
-For a shear parallel to the x axis has \\( x&#39; = x + ky \\) and \\( y&#39; = y \\) ; the shear matrix, applied to column vectors, is:    
+For a shear parallel to the x axis has \\( x'; = x + ky \\) and \\( y'; = y \\) ; the shear matrix, applied to column vectors, is:    
 $$ \begin{bmatrix} x' \cr \ y' \end{bmatrix} = \begin{bmatrix} 1 & k \cr \ 0 & 1 \end{bmatrix} \begin{bmatrix} x \cr \ y \end{bmatrix} $$
 
-A shear parallel to the y axis has \\( x&#39; = x \\) and \\( y&#39; = y + kx \\) , which has matrix form:    
+A shear parallel to the y axis has \\( x'; = x \\) and \\( y'; = y + kx \\) , which has matrix form:    
 $$ \begin{bmatrix} x' \cr \ y' \end{bmatrix} = \begin{bmatrix} 1 & 0 \cr \ k & 1 \end{bmatrix} \begin{bmatrix} x \cr \ y \end{bmatrix} $$
 
 
