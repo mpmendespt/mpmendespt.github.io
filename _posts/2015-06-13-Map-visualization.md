@@ -8,7 +8,7 @@ category: R
 
 Here I tried to produce some map visualization in R.   
 
-* First using data from [GADM database of Global Administrative Areas] (http://gadm.org/).           
+* First using data from [GADM database of Global Administrative Areas](http://gadm.org/).           
 * Second using the package RWorldMap,              
 * Third using the package ggmap that allows visualizations of spatial data on maps retrieved from Google Maps, OpenStreetMap, etc., and           
 * Fourth using the package RgoogleMaps allows you to plot data points on any kind  of map you can imagine  (terrain, satellite, hybrid).
@@ -90,9 +90,9 @@ plot(newmap, xlim = c(-20, 59),  ylim = c(35, 71),  asp = 1 )
 
 ![plot of chunk unnamed-chunk-5](/../figure/Map-visualization/unnamed-chunk-5-1.png) 
 
-## [Geocoding] (https://en.wikipedia.org/wiki/Geocoding)
+## [Geocoding](https://en.wikipedia.org/wiki/Geocoding)
  
-The geocode function from the ggmap package finds the coordinates of a location using Google Maps. Thus, finding the coordinates of the [Extreme points of Europe] (https://en.wikipedia.org/wiki/Extreme_points_of_Europe) can be done by: 
+The geocode function from the ggmap package finds the coordinates of a location using Google Maps. Thus, finding the coordinates of the [Extreme points of Europe](https://en.wikipedia.org/wiki/Extreme_points_of_Europe) can be done by: 
 
 
 {% highlight r %}
@@ -272,14 +272,14 @@ PortugalMap + geom_leg(aes(x = startLon, y = startLat, xend = endLon, yend = end
 
 ### References
 
-* [OpenStreeMap] (http://download.geofabrik.de/)    
-* [http://www.molecularecologist.com/2012/09/making-maps-with-r/] (http://www.molecularecologist.com/2012/09/making-maps-with-r/)        
-* [http://allthingsr.blogspot.pt/2012/03/geocode-and-reverse-geocode-your-data.html] (http://allthingsr.blogspot.pt/2012/03/geocode-and-reverse-geocode-your-data.html)       
-* [http://www.r-bloggers.com/13-mapping-in-r-representing-geospatial-data-together-with-ggplot/] (http://www.r-bloggers.com/13-mapping-in-r-representing-geospatial-data-together-with-ggplot/       )       
-* [https://dl.dropboxusercontent.com/u/24648660/ggmap%20useR%202012.pdf] (https://dl.dropboxusercontent.com/u/24648660/ggmap%20useR%202012.pdf)       
-* [https://wilkinsondarren.wordpress.com/2013/02/01/mapping-in-r-representing-geospatial-data-together-with-ggplot/] (https://wilkinsondarren.wordpress.com/2013/02/01/mapping-in-r-representing-geospatial-data-together-with-ggplot/)     
-* [https://www.google.pt/maps/@39.6100171,-8.2505952,15z?hl=pt-PT] (https://www.google.pt/maps/@39.6100171,-8.2505952,15z?hl=pt-PT)          
-* [http://www.di.fc.ul.pt/~jpn/r/maps/index.html] (http://www.di.fc.ul.pt/~jpn/r/maps/index.html)   
-* [http://www.milanor.net/blog/?p=594] (http://www.milanor.net/blog/?p=594)     
-* [http://pakillo.github.io/R-GIS-tutorial/] (http://pakillo.github.io/R-GIS-tutorial/)    
+* [OpenStreeMap](http://download.geofabrik.de/)    
+* [http://www.molecularecologist.com/2012/09/making-maps-with-r/](http://www.molecularecologist.com/2012/09/making-maps-with-r/)        
+* [http://allthingsr.blogspot.pt/2012/03/geocode-and-reverse-geocode-your-data.html](http://allthingsr.blogspot.pt/2012/03/geocode-and-reverse-geocode-your-data.html)       
+* [http://www.r-bloggers.com/13-mapping-in-r-representing-geospatial-data-together-with-ggplot/](http://www.r-bloggers.com/13-mapping-in-r-representing-geospatial-data-together-with-ggplot/       )       
+* [https://dl.dropboxusercontent.com/u/24648660/ggmap%20useR%202012.pdf](https://dl.dropboxusercontent.com/u/24648660/ggmap%20useR%202012.pdf)       
+* [https://wilkinsondarren.wordpress.com/2013/02/01/mapping-in-r-representing-geospatial-data-together-with-ggplot/](https://wilkinsondarren.wordpress.com/2013/02/01/mapping-in-r-representing-geospatial-data-together-with-ggplot/)     
+* [https://www.google.pt/maps/@39.6100171,-8.2505952,15z?hl=pt-PT](https://www.google.pt/maps/@39.6100171,-8.2505952,15z?hl=pt-PT)          
+* [http://www.di.fc.ul.pt/~jpn/r/maps/index.html](http://www.di.fc.ul.pt/~jpn/r/maps/index.html)   
+* [http://www.milanor.net/blog/?p=594](http://www.milanor.net/blog/?p=594)     
+* [http://pakillo.github.io/R-GIS-tutorial/](http://pakillo.github.io/R-GIS-tutorial/)    
     
