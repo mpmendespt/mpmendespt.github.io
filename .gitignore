@@ -2,3 +2,5 @@ _site
 .Rproj.user
 .Rhistory
 .RData
+.jekyll-cache
+_backups_

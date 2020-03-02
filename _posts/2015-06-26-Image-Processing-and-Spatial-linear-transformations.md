@@ -15,12 +15,12 @@ f: [a,b]x[c,d] -> [0,1]
 
 A color image is just three functions pasted together. We can write this as a “vector-valued” function:
 
-$$\pmb {f(x,y)} = \bigg[ \begin{array}
+$$\pmb {f(x,y)} = \Bigg[ \begin{array}
 {c}
 & r(x,y) \cr \\
 & g(x,y) \cr \\
 & b(x,y) 
-\end{array} \bigg] 
+\end{array} \Bigg] 
 $$
 
 * Computing Transformations
@@ -35,39 +35,21 @@ In 2D graphics Linear transformations can be represented by 2x2 matrices. Most c
 For rotation by an angle θ clockwise about the origin, the functional form is \\( x' = xcosθ + ysinθ \\)      
 and \\( y' = − xsinθ + ycosθ \\). Written in matrix form, this becomes:    
 $$
-&#10;\begin{bmatrix} x&#39; \cr \\
-y&#39; \end{bmatrix} = \begin{bmatrix} \cos \theta &amp;  \sin\theta \cr \\
--\sin \theta &amp; \cos \theta \end{bmatrix} \begin{bmatrix} x \cr \\
-y \end{bmatrix}&#10;
+\begin{bmatrix} x' \cr \ y' \end{bmatrix} = \begin{bmatrix} \cos \theta & \sin\theta \cr \ -\sin \theta & \cos \theta \end{bmatrix} \begin{bmatrix} x \cr \ y \end{bmatrix} 
 $$
+
 
 #### Scaling
 For scaling we have \\( x&#39; = s\_x \cdot x \\) and \\( y&#39; = s\_y \cdot y \\). The matrix form is:         
-$$
-&#10;\begin{bmatrix} x&#39; \cr \\
-y&#39; \end{bmatrix} = \begin{bmatrix} s\_x &amp; 0 \cr \\
-0 &amp; s\_y \end{bmatrix} \begin{bmatrix} x \cr \\
-y \end{bmatrix}&#10;
-$$
+$$ \begin{bmatrix} x' \cr \ y' \end{bmatrix} = \begin{bmatrix} s_x & 0 \cr \ 0 & s_y \end{bmatrix} \begin{bmatrix} x \cr \ y \end{bmatrix} $$
 
 #### Shearing
 For shear mapping (visually similar to slanting), there are two possibilities.    
 For a shear parallel to the x axis has \\( x&#39; = x + ky \\) and \\( y&#39; = y \\) ; the shear matrix, applied to column vectors, is:    
-$$
-&#10;\begin{bmatrix} x&#39; \cr \\
-y&#39; \end{bmatrix} = \begin{bmatrix} 1 &amp; k \cr \\
-0 &amp; 1 \end{bmatrix} \begin{bmatrix} x \cr \\
-y \end{bmatrix}&#10;
-$$
+$$ \begin{bmatrix} x' \cr \ y' \end{bmatrix} = \begin{bmatrix} 1 & k \cr \ 0 & 1 \end{bmatrix} \begin{bmatrix} x \cr \ y \end{bmatrix} $$
 
 A shear parallel to the y axis has \\( x&#39; = x \\) and \\( y&#39; = y + kx \\) , which has matrix form:    
-$$
-&#10;\begin{bmatrix} x&#39; \cr \\
-y&#39; \end{bmatrix} = \begin{bmatrix} 1 &amp; 0 \cr \\
-k &amp; 1 \end{bmatrix} \begin{bmatrix} x \cr \\
-y \end{bmatrix}&#10;
-$$
-
+$$ \begin{bmatrix} x' \cr \ y' \end{bmatrix} = \begin{bmatrix} 1 & 0 \cr \ k & 1 \end{bmatrix} \begin{bmatrix} x \cr \ y \end{bmatrix} $$
 
 
 
@@ -102,7 +84,7 @@ dim(img)
 display(img, method = "raster")
 {% endhighlight %}
 
-![plot of chunk unnamed-chunk-1](/../figure/Image-Processing-and-Spatial-linear-transformations/unnamed-chunk-1-1.png) 
+![plot of chunk unnamed-chunk-1](/../figure/Image-Processing-and-Spatial-linear-transformations/unnamed-chunk-1-1.png)
 
 #### Image Properties
 
@@ -141,13 +123,13 @@ img2 <- img - 0.3
 display(img1, method = "raster")
 {% endhighlight %}
 
-![plot of chunk unnamed-chunk-3](/../figure/Image-Processing-and-Spatial-linear-transformations/unnamed-chunk-3-1.png) 
+![plot of chunk unnamed-chunk-3](/../figure/Image-Processing-and-Spatial-linear-transformations/unnamed-chunk-3-1.png)
 
 {% highlight r %}
 display(img2, method = "raster")
 {% endhighlight %}
 
-![plot of chunk unnamed-chunk-3](/../figure/Image-Processing-and-Spatial-linear-transformations/unnamed-chunk-3-2.png) 
+![plot of chunk unnamed-chunk-3](/../figure/Image-Processing-and-Spatial-linear-transformations/unnamed-chunk-3-2.png)
 
 * Adjusting Contrast
 
@@ -158,13 +140,13 @@ img2 <- img * 2
 display(img1, method = "raster")
 {% endhighlight %}
 
-![plot of chunk unnamed-chunk-4](/../figure/Image-Processing-and-Spatial-linear-transformations/unnamed-chunk-4-1.png) 
+![plot of chunk unnamed-chunk-4](/../figure/Image-Processing-and-Spatial-linear-transformations/unnamed-chunk-4-1.png)
 
 {% highlight r %}
 display(img2, method = "raster")
 {% endhighlight %}
 
-![plot of chunk unnamed-chunk-4](/../figure/Image-Processing-and-Spatial-linear-transformations/unnamed-chunk-4-2.png) 
+![plot of chunk unnamed-chunk-4](/../figure/Image-Processing-and-Spatial-linear-transformations/unnamed-chunk-4-2.png)
 
 * Gamma Correction
 
@@ -176,19 +158,19 @@ img3 <- (img + 0.2) ^3
 display(img1, method = "raster")
 {% endhighlight %}
 
-![plot of chunk unnamed-chunk-5](/../figure/Image-Processing-and-Spatial-linear-transformations/unnamed-chunk-5-1.png) 
+![plot of chunk unnamed-chunk-5](/../figure/Image-Processing-and-Spatial-linear-transformations/unnamed-chunk-5-1.png)
 
 {% highlight r %}
 display(img2, method = "raster")
 {% endhighlight %}
 
-![plot of chunk unnamed-chunk-5](/../figure/Image-Processing-and-Spatial-linear-transformations/unnamed-chunk-5-2.png) 
+![plot of chunk unnamed-chunk-5](/../figure/Image-Processing-and-Spatial-linear-transformations/unnamed-chunk-5-2.png)
 
 {% highlight r %}
 display(img3, method = "raster")
 {% endhighlight %}
 
-![plot of chunk unnamed-chunk-5](/../figure/Image-Processing-and-Spatial-linear-transformations/unnamed-chunk-5-3.png) 
+![plot of chunk unnamed-chunk-5](/../figure/Image-Processing-and-Spatial-linear-transformations/unnamed-chunk-5-3.png)
 
 * Cropping Image
 
@@ -198,7 +180,7 @@ img1 <-img[(1:400)+100, 1:400,]
 display(img1, method = "raster")
 {% endhighlight %}
 
-![plot of chunk unnamed-chunk-6](/../figure/Image-Processing-and-Spatial-linear-transformations/unnamed-chunk-6-1.png) 
+![plot of chunk unnamed-chunk-6](/../figure/Image-Processing-and-Spatial-linear-transformations/unnamed-chunk-6-1.png)
 
 ### Spatial Transformation
 
@@ -211,28 +193,28 @@ y <- flip(img)
 display(y, title='flip(img)', method = "raster")
 {% endhighlight %}
 
-![plot of chunk unnamed-chunk-7](/../figure/Image-Processing-and-Spatial-linear-transformations/unnamed-chunk-7-1.png) 
+![plot of chunk unnamed-chunk-7](/../figure/Image-Processing-and-Spatial-linear-transformations/unnamed-chunk-7-1.png)
 
 {% highlight r %}
 y = flop(img) 
 display(y, title='flop(img)', method = "raster")
 {% endhighlight %}
 
-![plot of chunk unnamed-chunk-7](/../figure/Image-Processing-and-Spatial-linear-transformations/unnamed-chunk-7-2.png) 
+![plot of chunk unnamed-chunk-7](/../figure/Image-Processing-and-Spatial-linear-transformations/unnamed-chunk-7-2.png)
 
 {% highlight r %}
 y <- rotate(img, 30) 
 display(y, title='rotate(img, 30)', method = "raster")
 {% endhighlight %}
 
-![plot of chunk unnamed-chunk-7](/../figure/Image-Processing-and-Spatial-linear-transformations/unnamed-chunk-7-3.png) 
+![plot of chunk unnamed-chunk-7](/../figure/Image-Processing-and-Spatial-linear-transformations/unnamed-chunk-7-3.png)
 
 {% highlight r %}
 y <- translate(img, c(120, -20)) 
 display(y, title='translate(img, c(120, -20))', method = "raster")
 {% endhighlight %}
 
-![plot of chunk unnamed-chunk-7](/../figure/Image-Processing-and-Spatial-linear-transformations/unnamed-chunk-7-4.png) 
+![plot of chunk unnamed-chunk-7](/../figure/Image-Processing-and-Spatial-linear-transformations/unnamed-chunk-7-4.png)
 
 
 #### All spatial transforms except flip and flop are based on the general affine transformation.
@@ -277,7 +259,7 @@ m  # Horizontal flip
 display(affine(img, m),  method = "raster")
 {% endhighlight %}
 
-![plot of chunk unnamed-chunk-8](/../figure/Image-Processing-and-Spatial-linear-transformations/unnamed-chunk-8-1.png) 
+![plot of chunk unnamed-chunk-8](/../figure/Image-Processing-and-Spatial-linear-transformations/unnamed-chunk-8-1.png)
 
 *  **Horizontal shear**
 $${m} = \left[ 
@@ -310,7 +292,7 @@ m  # horizontal shear  r = 1/2
 display(affine(img, m),  method = "raster")
 {% endhighlight %}
 
-![plot of chunk unnamed-chunk-9](/../figure/Image-Processing-and-Spatial-linear-transformations/unnamed-chunk-9-1.png) 
+![plot of chunk unnamed-chunk-9](/../figure/Image-Processing-and-Spatial-linear-transformations/unnamed-chunk-9-1.png)
 
 *  **Rotation by π/6**
 $${m} = \left[ 
@@ -342,7 +324,7 @@ m  # Rotation by π/6
 display(affine(img, m),  method = "raster")
 {% endhighlight %}
 
-![plot of chunk unnamed-chunk-10](/../figure/Image-Processing-and-Spatial-linear-transformations/unnamed-chunk-10-1.png) 
+![plot of chunk unnamed-chunk-10](/../figure/Image-Processing-and-Spatial-linear-transformations/unnamed-chunk-10-1.png)
 
 *  **Squeeze mapping with r=3/2**
 $${m} = \left[ 
@@ -374,7 +356,7 @@ m  # Squeeze mapping with r=3/2
 display(affine(img, m),  method = "raster")
 {% endhighlight %}
 
-![plot of chunk unnamed-chunk-11](/../figure/Image-Processing-and-Spatial-linear-transformations/unnamed-chunk-11-1.png) 
+![plot of chunk unnamed-chunk-11](/../figure/Image-Processing-and-Spatial-linear-transformations/unnamed-chunk-11-1.png)
 
 *  **Scaling by a factor of 3/2**
 $${m} = \left[ 
@@ -406,7 +388,7 @@ m  # Scaling by a factor of 3/2
 display(affine(img, m),  method = "raster")
 {% endhighlight %}
 
-![plot of chunk unnamed-chunk-12](/../figure/Image-Processing-and-Spatial-linear-transformations/unnamed-chunk-12-1.png) 
+![plot of chunk unnamed-chunk-12](/../figure/Image-Processing-and-Spatial-linear-transformations/unnamed-chunk-12-1.png)
 
 *  **Scaling horizontally by a factor of 1/2** 
 $${m} = \left[ 
@@ -438,7 +420,7 @@ m  # scale a figure horizontally  r = 1/2
 display(affine(img, m),  method = "raster")
 {% endhighlight %}
 
-![plot of chunk unnamed-chunk-13](/../figure/Image-Processing-and-Spatial-linear-transformations/unnamed-chunk-13-1.png) 
+![plot of chunk unnamed-chunk-13](/../figure/Image-Processing-and-Spatial-linear-transformations/unnamed-chunk-13-1.png)
 
 
 ### References

@@ -2,7 +2,7 @@
 # cleanup
 rm(list=ls())
 
-setwd("D:/DL/_DL_/_ELECTRONICA_/_ESTUDO_3/_Blog with RStudio_/mpmendespt.github.io/_drafts")
+setwd("C:/_DL_c_/RASPBERRY/_Raspberry_PI_/Cluster-DOCs/Jekyll-Blog/mpmendespt.github.io/_drafts")
 filename = "Hello-World.Rmd"
 source("R2jekyll_v2.R")
 
@@ -12,7 +12,7 @@ source("R2jekyll_v2.R")
 filename = "Test1.Rmd"
 source("R2jekyll_v2.R")
 
-setwd("D:/DL/_DL_/_ELECTRONICA_/_ESTUDO_3/_Blog with RStudio_/mpmendespt.github.io/_drafts")
+setwd("C:/_DL_c_/RASPBERRY/_Raspberry_PI_/Cluster-DOCs/Jekyll-Blog/mpmendespt.github.io/_drafts")
 filename = "PA1_Statistical_Inference.Rmd"
 source("R2jekyll_v2.R")
 
@@ -26,7 +26,9 @@ source("R2jekyll_v2.R")
 filename = "Map-visualization.Rmd"
 source("R2jekyll_v2.R", encoding='UTF-8')
 #
-#  D:\DL\_DL_\_ELECTRONICA_\_ESTUDO_3\_Blog with RStudio_\mpmendespt.github.io
+# D:\DL\_DL_\_ELECTRONICA_\_ESTUDO_3\_Blog with RStudio_\mpmendespt.github.io
+# C:\_DL_c_\RASPBERRY\_Raspberry_PI_\Cluster-DOCs\Jekyll-Blog\mpmendespt.github.io
+# C:/_DL_c_/RASPBERRY/_Raspberry_PI_/Cluster-DOCs/Jekyll-Blog/mpmendespt.github.io/_drafts
 #
 filename = "Visualizing-World-Development-Indicators.Rmd"
 source("R2jekyll_v2.R", encoding='UTF-8')
