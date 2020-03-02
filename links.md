@@ -5,11 +5,11 @@ category: Links
 permalink: /links/
 ---
 
-* [me](http://mpmendespt.github.io/)
-* [Anti-Spyware, Anti-Adware, Anti-Rootkits, Anti-Vírus] (http://mpmendespt.esy.es/)
-* [MPM Electrónica] (http://mpmendes-electronica.blogspot.pt/)
+* [me](http://mpmendespt.github.io/)  
+* [Anti-Spyware, Anti-Adware, Anti-Rootkits, Anti-Vírus] (http://mpmendespt.esy.es/)  
+* [MPM Electrónica] (http://mpmendes-electronica.blogspot.pt/)   
 * [Destaques…”Recortes”…Arquivo…] (http://mpmendespt.blogspot.pt/)
-* [Trading Ideas] (http://mpmendespt-trading.blogspot.pt/)
+* [Trading Ideas] (http://mpmendespt-trading.blogspot.pt/)  
 * [Apontamentos Virtuais] (http://apontamentos-virtuais.blogspot.pt/)   
 *
 * [A Very Short History Of Data Science] (http://www.forbes.com/sites/gilpress/2013/05/28/a-very-short-history-of-data-science/)   
