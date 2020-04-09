@@ -199,7 +199,7 @@ col <- 1:4 # colour
 
 old <- par(mfrow = c(1, 2))
 # Plot Margins
-par(mar = c(1, 2, 3, 1.1)) # Set the margin on all sides to 2
+par(mar = c(1, 2, 3, 1)) # Set the margin on all sides to 2
 # par(mar = c(bottom, left, top, right))
 
 matplot(fit$time, fit[ , 2:4], type = "l", xlab = "Day", ylab = "Number of subjects", lwd = 2, lty = 1, col = col)
@@ -209,12 +209,12 @@ matplot(fit$time, fit[ , 2:4], type = "l", xlab = "Day", ylab = "Number of subje
  
 points(Day, Infected,  col = "blue")
 #legend("bottomright", c("Susceptibles", "Infecteds", "Recovereds"), lty = 1, lwd = 2, col = col, inset = 0.05)
-legend("bottomleft", c("Susceptibles", "Forcast Infecteds", "Forecast Recovereds", "Infecteds"), cex=0.7, lty = 1, lwd = 3, col = col, inset = c(0.19, 0.01), box.col="green")
+legend("bottomleft", c("Susceptibles", "Forcast Infecteds", "Forecast Recovereds", "Infecteds"), cex=0.9, lty = 1, lwd = 3, col = col, inset = c(0.19, 0.01), box.col="green")
 
 title("SIR model COVID-19 Portugal", outer = TRUE, line = -2)
 {% endhighlight %}
 
-![plot of chunk unnamed-chunk-4](/../figure/The-importance-of-flattening the curve/unnamed-chunk-4-1.png)
+![plot of chunk unnamed-chunk-12](/../figure/The-importance-of-flattening the curve/unnamed-chunk-12-1.png)
 
 We can now extract some interesting statistics. One important number is the so-called basic reproduction number (also basic reproduction ratio) $R_0$ (pronounced “R naught”) which basically shows how many healthy people get infected by a sick person on average:
 $R_0 = \frac{\beta}{\gamma}$
