@@ -2,7 +2,8 @@
 # cleanup
 rm(list=ls())
 
-setwd("C:/_DL_c_/RASPBERRY/_Raspberry_PI_/Cluster-DOCs/Jekyll-Blog/mpmendespt.github.io/_drafts")
+#setwd("C:/_DL_c_/RASPBERRY/_Raspberry_PI_/Cluster-DOCs/Jekyll-Blog/mpmendespt.github.io/_drafts")
+setwd("D:/Downloads/work_python_and_R/_My_Blogs_/mpmendespt.github.io/_drafts")
 filename = "Hello-World.Rmd"
 source("R2jekyll_v2.R")
 
@@ -44,5 +45,12 @@ source("R2jekyll_v2.R", encoding='UTF-8')
 #
 filename = "MRI-image-segmentation.Rmd"
 source("R2jekyll_v2.R", encoding='UTF-8')
+
+# The-importance-of-flattening the curve.Rmd
+setwd("D:/Downloads/work_python_and_R/_My_Blogs_/mpmendespt.github.io/_drafts")
+filename = "The-importance-of-flattening the curve.Rmd"
+source("R2jekyll_v2.R", encoding='UTF-8')
+
+
 
 
