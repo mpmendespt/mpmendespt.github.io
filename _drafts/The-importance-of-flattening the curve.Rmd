@@ -9,7 +9,7 @@ category: R COVID-19 “flattening the curve” "The SIR model"
 ### Lessons from the 1918 Spanish flu pandemic 
 The world of 2020 is vastly different from 1918, the year Spanish flu began to spread around the world. By 1920, Spanish flu is thought to have claimed the lives of up to 100 million people. But, as science writer and journalist Laura Spinney notes, many of the public health measures were similar to measures governments are taking today.
 
-![Spanish flu](https://audio.guim.co.uk/2020/03/30-67185-200331TIFspanishflu.mp3)
+[Spanish flu](https://audio.guim.co.uk/2020/03/30-67185-200331TIFspanishflu.mp3)
 
 ### This chart of the 1918 Spanish flu shows why social distancing works
 In 1918, the city of Philadelphia threw a parade that killed thousands of people. Ignoring warnings of influenza among soldiers preparing for World War I, the march to support the war effort drew 200,000 people who crammed together to watch the procession. Three days later, every bed in Philadelphia’s 31 hospitals was filled with sick and dying patients, infected by the Spanish flu.
@@ -23,7 +23,10 @@ The extreme measures—now known as social distancing, which is being called for
 ### What The 1918 Flu Pandemic Teaches Us About The Coronavirus Outbreak
 
 ![What The 1918 Flu Pandemic Teaches Us](https://dts.podtrac.com/redirect.mp3/traffic.megaphone.fm/BUR8400766103.mp3)   
-...
+<div align="center">
+<iframe width="100%" height="124" scrolling="no" frameborder="no" src="https://player.wbur.org/onpoint/2020/03/24/lessons-coronavirus-1918-flu-pandemic"></iframe>
+</div>
+...   
 [John Barry](http://www.johnmbarry.com/), professor at the Tulane University School of Public Health and Tropical Medicine. Author of "[The Great Influenza: The Story of the Deadliest Pandemic in History.](https://www.amazon.com/Great-Influenza-Deadliest-Pandemic-History/dp/0143036491)" [(@johnmbarry)](https://twitter.com/johnmbarry?lang=en)   
 [Jack Beatty](https://www.wbur.org/inside/staff/jack-beatty), On Point news analyst. [(@JackBeattyNPR)](https://twitter.com/JackBeattyNPR)   
 
