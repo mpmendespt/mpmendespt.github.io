@@ -11,10 +11,9 @@ The world of 2020 is vastly different from 1918, the year Spanish flu began to s
 
 [Spanish flu](https://audio.guim.co.uk/2020/03/30-67185-200331TIFspanishflu.mp3)   
 
-<video>
+<audio controls>
   <source src="https://audio.guim.co.uk/2020/03/30-67185-200331TIFspanishflu.mp3" type="audio/mp3">
-  <p>Your browser does not support the video element.</p>
-</video>
+</audio>   
     
 ### This chart of the 1918 Spanish flu shows why social distancing works
 In 1918, the city of Philadelphia threw a parade that killed thousands of people. Ignoring warnings of influenza among soldiers preparing for World War I, the march to support the war effort drew 200,000 people who crammed together to watch the procession. Three days later, every bed in Philadelphia’s 31 hospitals was filled with sick and dying patients, infected by the Spanish flu.
