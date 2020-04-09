@@ -7,11 +7,11 @@ category: R COVID-19 “flattening the curve” "The SIR model"
 ---
 
 ### Lessons from the 1918 Spanish flu pandemic 
-The world of 2020 is vastly different from 1918, the year Spanish flu began to spread around the world. By 1920, Spanish flu is thought to have claimed the lives of up to 100 million people. But, as science writer and journalist Laura Spinney notes, many of the public health measures were similar to measures governments are taking today.
+The world of 2020 is vastly different from 1918, the year Spanish flu began to spread around the world. By 1920, Spanish flu is thought to have claimed the lives of up to 100 million people. But, as science writer and journalist Laura Spinney notes, many of the public health measures were similar to measures governments are taking today.   
 
-[Spanish flu](https://audio.guim.co.uk/2020/03/30-67185-200331TIFspanishflu.mp3)   
+![Spanish flu](https://audio.guim.co.uk/2020/03/30-67185-200331TIFspanishflu.mp3)   
 <div align="center">
-<iframe width="100%" height="100" scrolling="no" frameborder="no" src="https://audio.guim.co.uk/2020/03/30-67185-200331TIFspanishflu.mp3" type="audio/mp3"></iframe>
+<iframe width="100%" height="100" scrolling="no" frameborder="no" src="https://audio.guim.co.uk/2020/03/30-67185-200331TIFspanishflu.mp3"></iframe>
 </div>
     
 ### This chart of the 1918 Spanish flu shows why social distancing works
