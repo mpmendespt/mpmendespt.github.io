@@ -66,9 +66,9 @@ library(deSolve)
 #library(platus)
 library(tidyverse)
 library(lubridate)
-#setwd("D:/Downloads/work_python_and_R/_R_/COVID-19")
+##
 source("functions.R",  echo=FALSE)
-#source("read_in_all_dfs.R",  echo=FALSE)
+
 ```
 
 ```{r, message=FALSE, warning=FALSE}
@@ -123,8 +123,6 @@ Infected
 Day <- 1:(length(Infected))
 N <- 10276617 # população de Portugal do INE
 
-#setwd("D:/Downloads/work_python_and_R/_My_Blogs_/mpmendespt.github.io/_drafts")
-
 ```
 
 Putting this into R code: 
@@ -168,8 +166,6 @@ Opt$message
  
 Opt_par <- setNames(Opt$par, c("beta", "gamma"))
 Opt_par
-##      beta     gamma
-## 1.0000000 0.7523632
 
 t <- 1:80 # time in days
 fit <- data.frame(ode(y = init, times = t, func = SIR, parms = Opt_par))
@@ -182,11 +178,9 @@ par(mar = c(1, 2, 3, 1)) # Set the margin on all sides to 2
 
 matplot(fit$time, fit[ , 2:4], type = "l", xlab = "Day", ylab = "Number of subjects", lwd = 2, lty = 1, col = col)
 matplot(fit$time, fit[ , 2:4], type = "l", xlab = "Day", ylab = "Number of subjects", lwd = 2, lty = 1, col = col, log = "y")
-## Warning in xy.coords(x, y, xlabel, ylabel, log = log): 1 y value <= 0
-## omitted from logarithmic plot
  
 points(Day, Infected,  col = "blue")
-#legend("bottomright", c("Susceptibles", "Infecteds", "Recovereds"), lty = 1, lwd = 2, col = col, inset = 0.05)
+
 legend("bottomleft", c("Susceptibles", "Forcast Infecteds", "Forecast Recovereds", "Infecteds"), cex=0.9, lty = 1, lwd = 3, col = col, inset = c(0.19, 0.01), box.col="green")
 
 title("SIR model COVID-19 Portugal", outer = TRUE, line = -2)
@@ -201,33 +195,26 @@ par(old)
  
 R0 <- setNames(Opt_par["beta"] / Opt_par["gamma"], "R0")
 R0
-##       R0 
-## 1.329145
  
 height_pand <- fit[fit$I == max(fit$I), "I", drop = FALSE] # height of pandemic
 height_pand
-##           I
-## 56	344780.1
+
 
 height_day <- as.integer(row.names(height_pand))
 
 max_infected <- max(fit$I)
 max_infected
-## [1] 344799
 
 max_infected / 5 # severe cases
-## 1] 68959
 
 max_infected_day <- from_date + height_day # height of pandemic
 max_infected_day
-## [1] "2020-04-27"
  
 max_infected * 0.06 # cases with need for intensive care
-## [1] 20687
  
 max_deaths <- max(fit$I) * 0.02 # max deaths with supposed 2% fatality rate
 max_deaths
-## [1] 6895
+
 ```
 **According to this model, the height of a possible pandemic would be reached by `r max_infected_day`  (`r height_day` days after it started). About `r format(max_infected, digits=6, nsmall=0, big.mark = " ")` people would be infected by then, which translates to about `r format(max_infected/5, digits=5, nsmall=0, big.mark = " ")` severe cases, about `r format(max_infected * 0.06, digits=5, nsmall=0, big.mark = " ")` cases in need of intensive care and up to `r format(max_deaths, digits=4, nsmall=0, big.mark = " ")` deaths.**      
 Those are the numbers our model produces and nobody knows whether they are correct while everybody hopes they are not.   

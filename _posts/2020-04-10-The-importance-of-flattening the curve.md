@@ -120,8 +120,6 @@ Infected
 {% highlight r %}
 Day <- 1:(length(Infected))
 N <- 10276617 # população de Portugal do INE
-
-#setwd("D:/Downloads/work_python_and_R/_My_Blogs_/mpmendespt.github.io/_drafts")
 {% endhighlight %}
 
 Putting this into R code: 
@@ -188,9 +186,6 @@ Opt_par
 
 
 {% highlight r %}
-##      beta     gamma
-## 1.0000000 0.7523632
-
 t <- 1:80 # time in days
 fit <- data.frame(ode(y = init, times = t, func = SIR, parms = Opt_par))
 col <- 1:4 # colour
@@ -202,11 +197,9 @@ par(mar = c(1, 2, 3, 1)) # Set the margin on all sides to 2
 
 matplot(fit$time, fit[ , 2:4], type = "l", xlab = "Day", ylab = "Number of subjects", lwd = 2, lty = 1, col = col)
 matplot(fit$time, fit[ , 2:4], type = "l", xlab = "Day", ylab = "Number of subjects", lwd = 2, lty = 1, col = col, log = "y")
-## Warning in xy.coords(x, y, xlabel, ylabel, log = log): 1 y value <= 0
-## omitted from logarithmic plot
  
 points(Day, Infected,  col = "blue")
-#legend("bottomright", c("Susceptibles", "Infecteds", "Recovereds"), lty = 1, lwd = 2, col = col, inset = 0.05)
+
 legend("bottomleft", c("Susceptibles", "Forcast Infecteds", "Forecast Recovereds", "Infecteds"), cex=0.9, lty = 1, lwd = 3, col = col, inset = c(0.19, 0.01), box.col="green")
 
 title("SIR model COVID-19 Portugal", outer = TRUE, line = -2)
@@ -235,9 +228,6 @@ R0
 
 
 {% highlight r %}
-##       R0 
-## 1.329145
- 
 height_pand <- fit[fit$I == max(fit$I), "I", drop = FALSE] # height of pandemic
 height_pand
 {% endhighlight %}
@@ -252,9 +242,6 @@ height_pand
 
 
 {% highlight r %}
-##           I
-## 56	344780.1
-
 height_day <- as.integer(row.names(height_pand))
 
 max_infected <- max(fit$I)
@@ -270,8 +257,6 @@ max_infected
 
 
 {% highlight r %}
-## [1] 344799
-
 max_infected / 5 # severe cases
 {% endhighlight %}
 
@@ -284,8 +269,6 @@ max_infected / 5 # severe cases
 
 
 {% highlight r %}
-## 1] 68959
-
 max_infected_day <- from_date + height_day # height of pandemic
 max_infected_day
 {% endhighlight %}
@@ -299,8 +282,6 @@ max_infected_day
 
 
 {% highlight r %}
-## [1] "2020-04-27"
- 
 max_infected * 0.06 # cases with need for intensive care
 {% endhighlight %}
 
@@ -313,8 +294,6 @@ max_infected * 0.06 # cases with need for intensive care
 
 
 {% highlight r %}
-## [1] 20687
- 
 max_deaths <- max(fit$I) * 0.02 # max deaths with supposed 2% fatality rate
 max_deaths
 {% endhighlight %}
@@ -323,12 +302,6 @@ max_deaths
 
 {% highlight text %}
 ## [1] 6613.95
-{% endhighlight %}
-
-
-
-{% highlight r %}
-## [1] 6895
 {% endhighlight %}
 **According to this model, the height of a possible pandemic would be reached by 2020-04-28  (57 days after it started). About 330 698 people would be infected by then, which translates to about 66 140 severe cases, about 19 842 cases in need of intensive care and up to 6 614 deaths.**      
 Those are the numbers our model produces and nobody knows whether they are correct while everybody hopes they are not.   
