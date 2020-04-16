@@ -219,8 +219,7 @@ Opt3$R0
 The current model gives: **R0 = `r Opt3$R0`** as we see the result is quite different.
 
 ### Some differences of the SIR model
-This SIR model uses the parameters **$K = \beta - \gamma$ and    
-$R_0 = \frac{\beta}{\gamma}$**   
+This SIR model uses the parameters $K = \beta - \gamma$  and   $R_0 = \frac{\beta}{\gamma}$     
 
 
 ```{r, message=FALSE, warning=FALSE}

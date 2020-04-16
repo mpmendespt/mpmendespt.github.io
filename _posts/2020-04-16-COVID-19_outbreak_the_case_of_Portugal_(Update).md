@@ -291,8 +291,7 @@ Opt3$R0
 The current model gives: **R0 = 1.0620105** as we see the result is quite different.
 
 ### Some differences of the SIR model
-This SIR model uses the parameters **$K = \beta - \gamma$ and    
-$R_0 = \frac{\beta}{\gamma}$**   
+This SIR model uses the parameters $K = \beta - \gamma$  and   $R_0 = \frac{\beta}{\gamma}$     
 
 
 
@@ -456,7 +455,7 @@ full_forecast_plot <- fit_i %>% # output_df
 full_forecast_plot
 {% endhighlight %}
 
-![plot of chunk unnamed-chunk-366](/../figure/COVID-19_outbreak_the_case_of_Portugal_(Update)/unnamed-chunk-366-1.png)
+![plot of chunk unnamed-chunk-6](/../figure/COVID-19_outbreak_the_case_of_Portugal_(Update)/unnamed-chunk-6-1.png)
 
 {% highlight r %}
 height_of_pandemic_date
