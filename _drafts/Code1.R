@@ -51,6 +51,11 @@ setwd("D:/Downloads/work_python_and_R/_My_Blogs_/mpmendespt.github.io/_drafts")
 filename = "The-importance-of-flattening the curve.Rmd"
 source("R2jekyll_v2.R", encoding='UTF-8')
 
+# COVID-19_outbreak_the_case_of_Portugal_(Update).Rmd
+setwd("D:/Downloads/work_python_and_R/_My_Blogs_/mpmendespt.github.io/_drafts")
+filename = "COVID-19_outbreak_the_case_of_Portugal_(Update).Rmd"
+source("R2jekyll_v2.R", encoding='UTF-8')
+
 
 
 
